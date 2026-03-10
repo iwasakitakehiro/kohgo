@@ -1,0 +1,23 @@
+{
+  "core": "https://wordpress.org/latest.zip",
+  "phpVersion": "8.2",
+  "plugins": [
+    "https://downloads.wordpress.org/plugin/classic-editor.1.6.2.zip",
+    "https://downloads.wordpress.org/plugin/google-sitemap-generator.4.1.21.zip"
+  ],
+  "themes": ["./dist/main"],
+  "port": 8000,
+  "env": {
+    "tests": {
+      "port": 8001
+    }
+  },
+  "config": {
+    "WP_DEBUG": true
+  },
+  "mappings": {
+    "wp-content/plugins/": "./dist/plugins/",
+    ".htaccess": "./dist/.htaccess",
+    "sql": "./sql"
+  }
+}
