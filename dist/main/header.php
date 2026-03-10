@@ -25,6 +25,18 @@
 </head>
 
 <body>
+    <aside>
+        <ul class="sns">
+            <li><a href="#" aria-label="LINE">LINE</a></li>
+            <li><a href="#" aria-label="Instagram">IG</a></li>
+            <li><a href="#" aria-label="TikTok">TT</a></li>
+        </ul>
+        <div class="scroll">
+            <p>SCHROLL</p>
+            <span class="scroll-line"></span>
+            <span class="scroll-dot"></span>
+        </div>
+    </aside>
     <header>
         <nav class="navigation__pc">
             <div class="site-header__logo-area">
