@@ -39,7 +39,6 @@ html {
 body {
   transition: opacity 0.5s;
   width: 100%;
-  height: 100vh;
 }
 
 header {
@@ -62,7 +61,10 @@ header {
     visibility: hidden;
     opacity: 0;
     transform: scale(0.98);
-    transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+    transition:
+      transform 0.5s,
+      opacity 0.5s,
+      visibility 0.5s;
     &.active {
       visibility: visible;
       transform: scale(1);
@@ -202,11 +204,22 @@ header {
     }
   }
 }
-
+.inner {
+  width: 1200px;
+  margin: auto;
+  @include tb() {
+    width: 80%;
+  }
+  @include sp() {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 aside {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 10;
   .side {
     align-items: center;
     background: #ffffff;
@@ -271,16 +284,15 @@ aside {
 }
 
 .mv {
-  overflow: hidden;
+  margin-left: 100px;
+  overflow-x: hidden;
   position: relative;
-
   &__inner {
     align-items: stretch;
     display: flex;
     min-height: 800px;
     position: relative;
   }
-
   &__visual {
     background: #6c5e4f;
     border-bottom-left-radius: 50px;
@@ -289,8 +301,7 @@ aside {
     overflow: hidden;
     position: relative;
   }
-
-  &__image-blank {
+  &__image {
     background: rgba(255, 255, 255, 0.14);
     inset: 0;
     position: absolute;
@@ -442,14 +453,6 @@ aside {
   padding: 100px 0 0;
   position: relative;
 
-  &__container {
-    display: flex;
-    gap: 80px;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-  }
-
   &__heading {
     flex: 0 0 252px;
     padding-top: 50px;
@@ -524,7 +527,7 @@ aside {
     display: grid;
     gap: 0;
     grid-template-columns: repeat(4, 1fr);
-    margin: 80px auto 0;
+    margin: 80px 0 0;
     max-width: 1200px;
   }
 
@@ -633,30 +636,14 @@ aside {
     }
   }
 }
-
-.tire-change {
-  background: #fbf9f6;
-  overflow: hidden;
-  padding: 100px 0;
-  position: relative;
-
-  &__inner {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-  }
-
+.sectioin-title {
   &__head {
     align-items: flex-start;
     display: flex;
     gap: 80px;
   }
-
   &__title-block {
     width: 240px;
-
     h2 {
       color: #6c5e4f;
       font-size: 36px;
@@ -665,7 +652,6 @@ aside {
       margin-top: 30px;
     }
   }
-
   &__en {
     color: #e5d4c1;
     font-size: 18px;
@@ -673,7 +659,6 @@ aside {
     letter-spacing: 0.05em;
     line-height: 2;
   }
-
   &__link {
     align-items: center;
     color: #6c5e4f;
@@ -698,6 +683,12 @@ aside {
     justify-content: center;
     width: 42px;
   }
+}
+.tire-change {
+  background: #fbf9f6;
+  overflow: hidden;
+  padding: 100px 0;
+  position: relative;
 
   &__lead {
     color: #6c5e4f;
@@ -862,11 +853,12 @@ aside {
 }
 
 .service {
-  background: #e17b4e;
-  overflow: hidden;
-  padding: 100px 0 120px;
-  position: relative;
-
+  &-head {
+    background: #e17b4e;
+    overflow: hidden;
+    padding: 100px 0 120px;
+    position: relative;
+  }
   &__inner {
     margin: 0 auto;
     max-width: 1200px;
@@ -956,7 +948,115 @@ aside {
     }
   }
 }
+.ranking {
+  background-image: url(../img/top/ranking-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  &__heading {
+    text-align: center;
+    h2 {
+      color: #fff;
+      font-size: 36px;
+      font-weight: 900;
+    }
+  }
 
+  &__slider {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+
+    .slider-wrapper {
+      display: flex;
+      .slider-slide {
+        &:nth-child(1) {
+          order: 3;
+        }
+        &:nth-child(2) {
+          order: 2;
+        }
+        &:nth-child(3) {
+          order: 4;
+        }
+        &:nth-child(4) {
+          order: 1;
+        }
+        &:nth-child(5) {
+          order: 5;
+        }
+      }
+    }
+    .myCard {
+      width: 260px;
+      height: 360px;
+      background-color: #fff;
+      padding: 50px 0;
+      box-shadow: 0 4px 20px 0 rgba(34, 34, 34, 0.3);
+      border-radius: 20px;
+      border: 10px solid #e25656;
+      &.no-first {
+        border: 10px solid #e3bd6b;
+      }
+      &.no-second {
+        border: 10px solid #b7bdc4;
+      }
+      &.no-third {
+        border: 10px solid #b76800;
+      }
+      .card-img {
+        text-align: center;
+      }
+      .card-title {
+        text-align: center;
+        color: #222;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 20px 0;
+      }
+      .card-price {
+        color: #222;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        .month {
+          display: block;
+          font-size: 14px;
+        }
+        .number {
+          color: #c00;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 1;
+          display: inline-block;
+        }
+        .unit {
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+      .detail-button {
+        display: flex;
+        padding: 0 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        background: #d24444;
+        color: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        height: 40px;
+        width: 144px;
+        margin: auto;
+      }
+    }
+  }
+}
 .service {
   padding-bottom: 90px;
 
@@ -974,6 +1074,7 @@ aside {
     min-height: 620px;
     padding: 30px 26px 30px 26px;
     width: 550px;
+    flex-shrink: 0;
   }
 
   &__item {
@@ -1020,20 +1121,13 @@ aside {
     width: 42px;
   }
 
-  &__image-blank {
+  &__image {
     background: rgba(255, 255, 255, 0.28);
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     flex: 1;
     min-height: 607px;
     position: relative;
-
-    &::before {
-      background: rgba(255, 255, 255, 0.22);
-      content: "";
-      inset: 20px;
-      position: absolute;
-    }
   }
 
   @include tb {
@@ -1053,7 +1147,7 @@ aside {
       font-size: 30px;
     }
 
-    &__image-blank {
+    &__image {
       border-radius: 30px;
       min-height: 360px;
       width: 100%;

@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Old+Mincho&display=swap");
 :root {
   --viewport: 1920;
-  --color-primary: #c21571;
-  --color-text: #353535;
-  --color-text-secondary: #999999;
-  --color-bg: #fff;
 }
 @media (max-width: 1280px) {
   :root {
@@ -16,6 +12,12 @@
     --viewport: 768;
   }
 }
+:root {
+  --color-primary: #c21571;
+  --color-text: #353535;
+  --color-text-secondary: #999999;
+  --color-bg: #fff;
+}
 
 html {
   scroll-behavior: initial;
@@ -26,7 +28,6 @@ html {
 body {
   transition: opacity 0.5s;
   width: 100%;
-  height: 100vh;
 }
 
 header {
@@ -174,10 +175,27 @@ header {
   text-decoration: none;
 }
 
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+@media (max-width: 1280px) {
+  .inner {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
 aside {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 10;
 }
 aside .side {
   align-items: center;
@@ -236,7 +254,8 @@ aside .scroll-dot {
 }
 
 .mv {
-  overflow: hidden;
+  margin-left: 100px;
+  overflow-x: hidden;
   position: relative;
 }
 .mv__inner {
@@ -253,7 +272,7 @@ aside .scroll-dot {
   overflow: hidden;
   position: relative;
 }
-.mv__image-blank {
+.mv__image {
   background: rgba(255, 255, 255, 0.14);
   inset: 0;
   position: absolute;
@@ -381,13 +400,6 @@ aside .scroll-dot {
   padding: 100px 0 0;
   position: relative;
 }
-.about__container {
-  display: flex;
-  gap: 80px;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 20px;
-}
 .about__heading {
   flex: 0 0 252px;
   padding-top: 50px;
@@ -452,7 +464,7 @@ aside .scroll-dot {
   display: grid;
   gap: 0;
   grid-template-columns: repeat(4, 1fr);
-  margin: 80px auto 0;
+  margin: 80px 0 0;
   max-width: 1200px;
 }
 .about__gallery-item {
@@ -543,42 +555,29 @@ aside .scroll-dot {
   }
 }
 
-.tire-change {
-  background: #fbf9f6;
-  overflow: hidden;
-  padding: 100px 0;
-  position: relative;
-}
-.tire-change__inner {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
-}
-.tire-change__head {
+.sectioin-title__head {
   align-items: flex-start;
   display: flex;
   gap: 80px;
 }
-.tire-change__title-block {
+.sectioin-title__title-block {
   width: 240px;
 }
-.tire-change__title-block h2 {
+.sectioin-title__title-block h2 {
   color: #6c5e4f;
   font-size: 36px;
   font-weight: 700;
   line-height: 2;
   margin-top: 30px;
 }
-.tire-change__en {
+.sectioin-title__en {
   color: #e5d4c1;
   font-size: 18px;
   font-style: italic;
   letter-spacing: 0.05em;
   line-height: 2;
 }
-.tire-change__link {
+.sectioin-title__link {
   align-items: center;
   color: #6c5e4f;
   display: inline-flex;
@@ -586,11 +585,11 @@ aside .scroll-dot {
   margin-top: 50px;
   text-decoration: none;
 }
-.tire-change__link span {
+.sectioin-title__link span {
   font-size: 16px;
   font-weight: 500;
 }
-.tire-change__link-icon {
+.sectioin-title__link-icon {
   align-items: center;
   background: #6c5e4f;
   border-radius: 999px;
@@ -599,6 +598,13 @@ aside .scroll-dot {
   height: 42px;
   justify-content: center;
   width: 42px;
+}
+
+.tire-change {
+  background: #fbf9f6;
+  overflow: hidden;
+  padding: 100px 0;
+  position: relative;
 }
 .tire-change__lead {
   color: #6c5e4f;
@@ -736,7 +742,7 @@ aside .scroll-dot {
   }
 }
 
-.service {
+.service-head {
   background: #e17b4e;
   overflow: hidden;
   padding: 100px 0 120px;
@@ -822,6 +828,112 @@ aside .scroll-dot {
   }
 }
 
+.ranking {
+  background-image: url(../img/top/ranking-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+.ranking__heading {
+  text-align: center;
+}
+.ranking__heading h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+}
+.ranking__slider {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+.ranking__slider .slider-wrapper {
+  display: flex;
+}
+.ranking__slider .slider-wrapper .slider-slide:nth-child(1) {
+  order: 3;
+}
+.ranking__slider .slider-wrapper .slider-slide:nth-child(2) {
+  order: 2;
+}
+.ranking__slider .slider-wrapper .slider-slide:nth-child(3) {
+  order: 4;
+}
+.ranking__slider .slider-wrapper .slider-slide:nth-child(4) {
+  order: 1;
+}
+.ranking__slider .slider-wrapper .slider-slide:nth-child(5) {
+  order: 5;
+}
+.ranking__slider .myCard {
+  width: 260px;
+  height: 360px;
+  background-color: #fff;
+  padding: 50px 0;
+  box-shadow: 0 4px 20px 0 rgba(34, 34, 34, 0.3);
+  border-radius: 20px;
+  border: 10px solid #e25656;
+}
+.ranking__slider .myCard.no-first {
+  border: 10px solid #e3bd6b;
+}
+.ranking__slider .myCard.no-second {
+  border: 10px solid #b7bdc4;
+}
+.ranking__slider .myCard.no-third {
+  border: 10px solid #b76800;
+}
+.ranking__slider .myCard .card-img {
+  text-align: center;
+}
+.ranking__slider .myCard .card-title {
+  text-align: center;
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 20px 0;
+}
+.ranking__slider .myCard .card-price {
+  color: #222;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.ranking__slider .myCard .card-price .month {
+  display: block;
+  font-size: 14px;
+}
+.ranking__slider .myCard .card-price .number {
+  color: #c00;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+}
+.ranking__slider .myCard .card-price .unit {
+  font-size: 12px;
+  display: inline-block;
+}
+.ranking__slider .myCard .detail-button {
+  display: flex;
+  padding: 0 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: #d24444;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  height: 40px;
+  width: 144px;
+  margin: auto;
+}
+
 .service {
   padding-bottom: 90px;
 }
@@ -838,6 +950,7 @@ aside .scroll-dot {
   min-height: 620px;
   padding: 30px 26px 30px 26px;
   width: 550px;
+  flex-shrink: 0;
 }
 .service__item {
   align-items: center;
@@ -878,19 +991,13 @@ aside .scroll-dot {
   min-width: 42px;
   width: 42px;
 }
-.service__image-blank {
+.service__image {
   background: rgba(255, 255, 255, 0.28);
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
   flex: 1;
   min-height: 607px;
   position: relative;
-}
-.service__image-blank::before {
-  background: rgba(255, 255, 255, 0.22);
-  content: "";
-  inset: 20px;
-  position: absolute;
 }
 @media (max-width: 1280px) {
   .service__content {
@@ -906,7 +1013,7 @@ aside .scroll-dot {
   .service__name {
     font-size: 30px;
   }
-  .service__image-blank {
+  .service__image {
     border-radius: 30px;
     min-height: 360px;
     width: 100%;

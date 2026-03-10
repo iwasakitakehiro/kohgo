@@ -3,8 +3,9 @@
     <section class="mv">
         <div class="mv__inner">
             <div class="mv__visual">
-                <div class="mv__image-blank" aria-hidden="true"></div>
-
+                <div class="mv__image" aria-hidden="true">
+                    <img src="<?= get_template_directory_uri(); ?>/img/top/mv01.png" alt="">
+                </div>
                 <div class="mv__copy-main">
                     <h1>守り、支える。<br>愛車と、あなたを。</h1>
                     <p>茂原市クルマのかかりつけ医「オートサービス向後」</p>
@@ -13,19 +14,15 @@
                 <div class="mv__copy-sub">
                     <p>Protect and support.<br>your beloved car and you.</p>
                 </div>
-
-                <p class="mv__bg-text" aria-hidden="true">YOURCARSDOCTOR</p>
             </div>
         </div>
     </section>
-
     <section class="about">
-        <div class="about__container">
+        <div class="inner">
             <div class="about__heading">
                 <p class="about__en">ABOUT US</p>
                 <h2>私たちについて</h2>
             </div>
-
             <div class="about__content">
                 <p>目指しているのは、<br>一度当社へお越しいただいた方が、また利用したいと思っていただける店。</p>
                 <p>例えば車検や修理などの場合も、お客様のご意向を十分にお伺いして、<br>必要なものを的確に判断して交換、修理します。</p>
@@ -39,27 +36,146 @@
                 </div>
             </div>
         </div>
-
         <div class="about__gallery" aria-hidden="true">
             <div class="about__gallery-item"></div>
             <div class="about__gallery-item"></div>
             <div class="about__gallery-item"></div>
             <div class="about__gallery-item about__gallery-item--last"></div>
         </div>
+    </section>
 
-        <p class="about__ring" aria-hidden="true">SAFE AND SUPPORT</p>
+    <section class="ranking">
+        <div>
+            <div class="ranking__heading">
+                <h2>新車リース人気ランキング</h2>
+            </div>
+            <div>
+                <div class="ranking__slider">
+                    <div class="slider">
+                        <div class="slider-wrapper">
+                            <div id="ranking01" class="slider-slide">
+                                <div class="myCard no-first">
+                                    <a href="https://futaba-car.jp/lineup/5681/" class="card">
+                                        <div class="card-img">
+                                            <img src="<?= get_template_directory_uri(); ?>/img/top/nbox.png" alt="N-BOX">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">N-BOX</p>
+                                            <div class="card-price">
+                                                <p>
+                                                    <span class="month">月額</span>
+                                                    <span class="number">10,000</span><span class="unit">円(税込)〜</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="detail-button">詳細はこちら</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="ranking02" class="slider-slide">
+                                <div class="myCard no-second">
+                                    <a href="https://futaba-car.jp/lineup/5629/" class="card">
+                                        <div class="card-img">
+                                            <img src="<?= get_template_directory_uri(); ?>/img/top/spacia.png" alt="スペーシア">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">スペーシア</p>
+                                            <div class="card-price">
+                                                <p>
+                                                    <span class="month">月額</span>
+                                                    <span class="number">10,000</span><span class="unit">円(税込)〜</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="detail-button">詳細はこちら</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="ranking03" class="slider-slide">
+                                <div class="myCard no-third">
+                                    <a href="https://futaba-car.jp/lineup/13453/" class="card">
+                                        <div class="card-img">
+                                            <img src="<?= get_template_directory_uri(); ?>/img/top/husler.png" alt="ハスラー">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">ハスラー</p>
+                                            <div class="card-price">
+                                                <p>
+                                                    <span class="month">月額</span>
+                                                    <span class="number">10,000</span><span class="unit">円(税込)〜</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="detail-button">詳細はこちら</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="ranking04" class="slider-slide">
+                                <div class="myCard">
+                                    <a href="https://futaba-car.jp/lineup/5717/" class="card">
+                                        <div class="card-img">
+                                            <img src="<?= get_template_directory_uri(); ?>/img/top/tant.png" alt="タント">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">タント</p>
+                                            <div class="card-price">
+                                                <p>
+                                                    <span class="month">月額</span>
+                                                    <span class="number">10,000</span><span class="unit">円(税込)〜</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="detail-button">詳細はこちら</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="ranking05" class="slider-slide">
+                                <div class="myCard">
+                                    <a href="https://futaba-car.jp/lineup/14496/" class="card">
+                                        <div class="card-img">
+                                            <img src="<?= get_template_directory_uri(); ?>/img/top/delicamini.png" alt="デリカミニ">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-title">デリカミニ</p>
+                                            <div class="card-price">
+                                                <p>
+                                                    <span class="month">月額</span>
+                                                    <span class="number">10,000</span><span class="unit">円(税込)〜</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="detail-button">詳細はこちら</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="tire-change">
-        <div class="tire-change__inner">
-            <div class="tire-change__head">
-                <div class="tire-change__title-block">
-                    <p class="tire-change__en">TIRE CHANGE</p>
+        <div class="inner">
+            <div class="sectioin-title__head">
+                <div class="sectioin-title__title-block">
+                    <p class="sectioin-title__en">TIRE CHANGE</p>
                     <h2>タイヤ交換</h2>
 
-                    <a class="tire-change__link" href="<?= get_home_url(); ?>/tire-change">
+                    <a class="sectioin-title__link" href="<?= get_home_url(); ?>/tire-change">
                         <span>詳細はこちら</span>
-                        <span class="tire-change__link-icon" aria-hidden="true">→</span>
+                        <span class="sectioin-title__link-icon" aria-hidden="true">→</span>
                     </a>
                 </div>
 
@@ -88,15 +204,19 @@
         <p class="tire-change__bg-text" aria-hidden="true">TIRE<br>CHANGE</p>
     </section>
     <section class="service">
-        <div class="service__inner">
-            <p class="service__en">SERVICE</p>
-            <h2>各種サービス</h2>
-            <p class="service__lead">
-                当社では、お客様のカーライフを総合的にサポートするため、<br>
-                カーラッピング・カールース・車検・鈑金・リモートサービス・自動車保険など、<br>
-                多様なサービスをワンストップでご提供しております。
-            </p>
-
+        <div class="service-head">
+            <div class="inner">
+                <p class="service__en">SERVICE</p>
+                <h2>各種サービス</h2>
+                <p class="service__lead">
+                    当社では、お客様のカーライフを総合的にサポートするため、<br>
+                    カーラッピング・カールース・車検・鈑金・リモートサービス・自動車保険など、<br>
+                    多様なサービスをワンストップでご提供しております。
+                </p>
+            </div>
+            <p class="service__bg-text" aria-hidden="true">SERVICE</p>
+        </div>
+        <div class="inner">
             <div class="service__content">
                 <div class="service__list" aria-label="サービス一覧">
                     <a class="service__item" href="#">
@@ -149,11 +269,11 @@
                         <span class="service__arrow" aria-hidden="true">→</span>
                     </a>
                 </div>
-
-                <div class="service__image-blank" aria-hidden="true"></div>
+                <div class="service__image" aria-hidden="true">
+                    <img src="<?= get_template_directory_uri(); ?>/img/top/service-img.png" alt="">
+                </div>
             </div>
         </div>
-        <p class="service__bg-text" aria-hidden="true">SERVICE</p>
     </section>
 </main>
 <?php get_footer(); ?>
