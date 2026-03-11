@@ -19,21 +19,32 @@
     </section>
     <section class="about">
         <div class="inner">
-            <div class="about__heading">
-                <p class="about__en">ABOUT US</p>
-                <h2>私たちについて</h2>
-            </div>
-            <div class="about__content">
-                <p>目指しているのは、<br>一度当社へお越しいただいた方が、また利用したいと思っていただける店。</p>
-                <p>例えば車検や修理などの場合も、お客様のご意向を十分にお伺いして、<br>必要なものを的確に判断して交換、修理します。</p>
-                <p>お車のコンディションを最適に保つための<br><span>「クルマのかかりつけ医」</span>としてなんでもご相談下さい。</p>
-
-                <div class="about__link-wrap">
-                    <a class="about__link" href="<?= get_home_url(); ?>/about">
-                        <span>詳細はこちら</span>
-                        <span class="about__link-icon" aria-hidden="true">→</span>
-                    </a>
+            <div class="section__wrap">
+                <div class="section__heading">
+                    <p class="section__en">ABOUT US</p>
+                    <h2>私たちについて</h2>
                 </div>
+                <div class="section__content">
+                    <div>
+                        <div>
+                            <p>目指しているのは、<br>一度当社へお越しいただいた方が、また利用したいと思っていただける店。</p>
+                            <p>例えば車検や修理などの場合も、お客様のご意向を十分にお伺いして、<br>必要なものを的確に判断して交換、修理します。</p>
+                            <p>お車のコンディションを最適に保つための<span>「クルマのかかりつけ医」</span>としてなんでもご相談下さい。</p>
+                        </div>
+                        <div class="section__link-wrap">
+                            <a class="section__link" href="<?= get_home_url(); ?>/about">
+                                <span>詳細はこちら</span>
+                                <span class="link-icon" aria-hidden="true">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="about__gallery" aria-hidden="true">
@@ -165,39 +176,78 @@
             </div>
         </div>
     </section>
+    <section class="new-car-sales">
+        <div class="inner">
+            <div class="section__head">
+                <div class="section__wrap">
+                    <div class="section__heading">
+                        <p class="section__en">NEW CAR SALES</p>
+                        <h2>新車販売</h2>
+                        <div class="section__link-wrap">
+                            <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
+                                <span>詳細はこちら</span>
+                                <span class="link-icon" aria-hidden="true">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                    </svg>
 
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section__content">
+                        頭金0円、しかも車検･税金･保険もコミコミの「コアラクラブユーカリプラン」をご提供。<br>
+                        毎月フラット支払いでクルマを所有いただけます。
+                    </div>
+                </div>
+            </div>
+            <div class="inner">
+                <div class="new-car-sales__img">
+                    <img src="<?= get_template_directory_uri(); ?>/img/top/new-car-sales.png">
+                </div>
+            </div>
+        </div>
+        <p class="tire-change__bg-text" aria-hidden="true">TIRE<br>CHANGE</p>
+    </section>
     <section class="tire-change">
         <div class="inner">
-            <div class="sectioin-title__head">
-                <div class="sectioin-title__title-block">
-                    <p class="sectioin-title__en">TIRE CHANGE</p>
-                    <h2>タイヤ交換</h2>
+            <div class="section__head">
+                <div class="section__wrap">
+                    <div class="section__heading">
+                        <p class="section__en">TIRE CHANGE</p>
+                        <h2>タイヤ交換</h2>
 
-                    <a class="sectioin-title__link" href="<?= get_home_url(); ?>/tire-change">
-                        <span>詳細はこちら</span>
-                        <span class="sectioin-title__link-icon" aria-hidden="true">→</span>
-                    </a>
-                </div>
+                        <div class="section__link-wrap">
+                            <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
+                                <span>詳細はこちら</span>
+                                <span class="link-icon" aria-hidden="true">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                    </svg>
 
-                <div class="tire-change__lead">
-                    <p>全国180店舗以上を展開する「タイヤ流通センター」の加盟店です。</p>
-                    <p>松・竹・梅の3つのプランから選ぶだけで、タイヤのプロが厳選した最適なタイヤをご提案いたします。</p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section__content">
+                        <p>全国180店舗以上を展開する「タイヤ流通センター」の加盟店です。<br>松・竹・梅の3つのプランから選ぶだけで、タイヤのプロが厳選した最適なタイヤをご提案いたします。</p>
+                    </div>
                 </div>
             </div>
 
             <div class="tire-change__cards" aria-hidden="true">
                 <article class="tire-change__card tire-change__card--summer">
-                    <p class="tire-change__card-label">◎ サマータイヤ</p>
-                    <p class="tire-change__price">¥8,900〜</p>
-                    <p class="tire-change__tax">（税込 ¥16,390〜）</p>
-                    <div class="tire-change__blank-tire"></div>
+                    <a href="#">
+                        <img src="<?= get_template_directory_uri(); ?>/img/global/summer-tire.png" alt="">
+                    </a>
                 </article>
 
                 <article class="tire-change__card tire-change__card--winter">
-                    <p class="tire-change__card-label">❄ スタッドレスタイヤ</p>
-                    <p class="tire-change__price">¥14,900〜</p>
-                    <p class="tire-change__tax">（税込 ¥16,390〜）</p>
-                    <div class="tire-change__blank-tire"></div>
+                    <a href="#">
+                        <img src="<?= get_template_directory_uri(); ?>/img/global/winter-tire.png" alt="">
+                    </a>
                 </article>
             </div>
         </div>
@@ -216,64 +266,103 @@
             </div>
             <p class="service__bg-text" aria-hidden="true">SERVICE</p>
         </div>
-        <div class="inner">
+        <div>
+
             <div class="service__content">
-                <div class="service__list" aria-label="サービス一覧">
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 01</p>
-                            <p class="service__name">カーラッピング</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 02</p>
-                            <p class="service__name">車検</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 03</p>
-                            <p class="service__name">鈑金</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 04</p>
-                            <p class="service__name">リモートサービス</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 05</p>
-                            <p class="service__name">自動車保険</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 06</p>
-                            <p class="service__name">タイヤ交換</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                    <a class="service__item" href="#">
-                        <div>
-                            <p class="service__num">SERVICE 07</p>
-                            <p class="service__name">ニコニコレンタカー</p>
-                        </div>
-                        <span class="service__arrow" aria-hidden="true">→</span>
-                    </a>
-                </div>
                 <div class="service__image" aria-hidden="true">
                     <img src="<?= get_template_directory_uri(); ?>/img/top/service-img.png" alt="">
                 </div>
+                <div class="inner">
+                    <div class="service__list" aria-label="サービス一覧">
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 01</p>
+                                <p class="service__name">カーラッピング</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 02</p>
+                                <p class="service__name">車検</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 03</p>
+                                <p class="service__name">鈑金</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 04</p>
+                                <p class="service__name">リモートサービス</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 05</p>
+                                <p class="service__name">自動車保険</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 06</p>
+                                <p class="service__name">タイヤ交換</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="service__item" href="#">
+                            <div>
+                                <p class="service__num">SERVICE 07</p>
+                                <p class="service__name">ニコニコレンタカー</p>
+                            </div>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </section>
 </main>
 <?php get_footer(); ?>
