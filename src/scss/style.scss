@@ -83,7 +83,10 @@ header {
     visibility: hidden;
     opacity: 0;
     transform: scale(0.98);
-    transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+    transition:
+      transform 0.5s,
+      opacity 0.5s,
+      visibility 0.5s;
     &.active {
       visibility: visible;
       transform: scale(1);
@@ -655,7 +658,6 @@ img {
 }
 .link-icon {
   align-items: center;
-  background: #6c5e4f;
   border-radius: 999px;
   color: #ffffff !important;
   display: inline-flex;
@@ -1688,11 +1690,8 @@ img {
 
   &__panel {
     background-color: #ffffff;
-    background-image: linear-gradient(
-        to right,
-        rgba(108, 94, 79, 0.04) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(to right, rgba(108, 94, 79, 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(108, 94, 79, 0.04) 1px, transparent 1px);
     background-size: 18px 18px;
     margin-top: 80px;
@@ -3186,7 +3185,9 @@ img {
     justify-content: center;
     min-height: 64px;
     padding: 20px;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
 
     &.is-active {
       background: #ef6f76;
@@ -3629,7 +3630,9 @@ img {
     font-weight: 700;
     min-height: 52px;
     padding: 16px 20px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 
     &.is-active {
       background: #de7e4d;
@@ -4855,10 +4858,8 @@ img {
 }
 
 .footer-cta {
-  background: linear-gradient(
-      rgba(188, 171, 150, 0.88),
-      rgba(188, 171, 150, 0.88)
-    ),
+  background:
+    linear-gradient(rgba(188, 171, 150, 0.88), rgba(188, 171, 150, 0.88)),
     radial-gradient(
       circle at 20% 40%,
       rgba(255, 255, 255, 0.16) 0%,
@@ -5237,20 +5238,20 @@ img {
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 72px;
     position: relative;
     z-index: 2;
+    max-width: 1560px;
   }
 
   &__card {
+    width: 380px;
     align-items: flex-end;
     background-color: #d7cec4;
-    background-image: linear-gradient(
-      180deg,
-      rgba(32, 23, 16, 0.04) 0%,
-      rgba(32, 23, 16, 0.35) 100%
-    );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #ffffff;
     display: flex;
     gap: 14px;
@@ -5259,6 +5260,10 @@ img {
     padding: 0 24px 28px;
     position: relative;
     text-decoration: none;
+
+    &:last-child {
+      border-radius: 0 50px 50px 0;
+    }
 
     &::before {
       background: linear-gradient(
@@ -5279,20 +5284,20 @@ img {
     }
   }
 
-  &__card--engine::after {
-    background: linear-gradient(135deg, #5f4c40 0%, #c7b5a2 100%);
+  &__card--engine {
+    background-image: url(../img/top/engine.png);
   }
 
-  &__card--brake::after {
-    background: linear-gradient(135deg, #314440 0%, #738c88 100%);
+  &__card--brake {
+    background-image: url(../img/top/brake.png);
   }
 
-  &__card--tire::after {
-    background: linear-gradient(135deg, #312928 0%, #79655e 100%);
+  &__card--tire {
+    background-image: url(../img/top/tire.png);
   }
 
-  &__card--other::after {
-    background: linear-gradient(135deg, #d7dce3 0%, #80756d 100%);
+  &__card--other {
+    background-image: url(../img/top/other.png);
   }
 
   &__card-title,
@@ -5400,4 +5405,7 @@ img {
       width: 36px;
     }
   }
+}
+.used-car-sales {
+  padding: 100px 0 80px;
 }
