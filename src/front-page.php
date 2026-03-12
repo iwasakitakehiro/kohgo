@@ -267,7 +267,6 @@
             <p class="service__bg-text" aria-hidden="true">SERVICE</p>
         </div>
         <div>
-
             <div class="service__content">
                 <div class="service__image" aria-hidden="true">
                     <img src="<?= get_template_directory_uri(); ?>/img/top/service-img.png" alt="">
@@ -362,7 +361,39 @@
                 </div>
             </div>
         </div>
-
+    </section>
+    <section class="top-maintenance">
+        <div class="inner">
+            <div class="top-maintenance__head">
+                <div class="top-maintenance__title-block">
+                    <p class="top-maintenance__en">MAINTENANCE</p>
+                    <h2>修理・整備</h2>
+                </div>
+                <div class="top-maintenance__lead">
+                    <p>車の調子が気になるときは、いつでもご相談ください。</p>
+                    <p>経験豊富な整備士が、部品交換からエンジン修理まで丁寧に点検・整備いたします。</p>
+                </div>
+            </div>
+        </div>
+        <p class="top-maintenance__bg-text" aria-hidden="true">MAINTENANCE</p>
+        <div class="top-maintenance__cards">
+            <a class="top-maintenance__card top-maintenance__card--engine" href="<?= get_home_url(); ?>/maintenance#engine">
+                <span class="top-maintenance__card-title">エンジン</span>
+                <span class="top-maintenance__card-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="top-maintenance__card top-maintenance__card--brake" href="<?= get_home_url(); ?>/maintenance#brake">
+                <span class="top-maintenance__card-title">ブレーキ</span>
+                <span class="top-maintenance__card-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="top-maintenance__card top-maintenance__card--tire" href="<?= get_home_url(); ?>/maintenance#tire">
+                <span class="top-maintenance__card-title">タイヤ</span>
+                <span class="top-maintenance__card-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="top-maintenance__card top-maintenance__card--other" href="<?= get_home_url(); ?>/maintenance#other">
+                <span class="top-maintenance__card-title">その他</span>
+                <span class="top-maintenance__card-arrow" aria-hidden="true">→</span>
+            </a>
+        </div>
     </section>
 </main>
 <?php get_footer(); ?>
