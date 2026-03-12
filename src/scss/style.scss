@@ -59,8 +59,24 @@ html {
 body {
   transition: opacity 0.5s;
   width: 100%;
-  font-size: 16px;
+  font-size: 0.83vw;
   font-family: gotham, "HigureGothic", sans-serif;
+  @include sp() {
+    font-size: 14px;
+  }
+}
+
+.sp-show {
+  display: none !important;
+  @include sp() {
+    display: block !important;
+  }
+}
+.pc-show {
+  display: block;
+  @include sp() {
+    display: none !important;
+  }
 }
 
 header {
@@ -83,7 +99,10 @@ header {
     visibility: hidden;
     opacity: 0;
     transform: scale(0.98);
-    transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+    transition:
+      transform 0.5s,
+      opacity 0.5s,
+      visibility 0.5s;
     &.active {
       visibility: visible;
       transform: scale(1);
@@ -306,6 +325,9 @@ aside {
   margin-left: 100px;
   overflow-x: hidden;
   position: relative;
+  @include sp() {
+    margin-left: 20px;
+  }
   &__inner {
     align-items: stretch;
     display: flex;
@@ -313,17 +335,27 @@ aside {
     position: relative;
   }
   &__visual {
-    background: #6c5e4f;
     border-bottom-left-radius: 50px;
     flex: 1;
     min-height: 800px;
     overflow: hidden;
     position: relative;
+    @include sp() {
+      height: 600px;
+    }
   }
   &__image {
-    background: rgba(255, 255, 255, 0.14);
     inset: 0;
     position: absolute;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+    @include sp() {
+      border-bottom-left-radius: 30px;
+    }
+    img {
+      height: 100%;
+      max-width: inherit;
+    }
   }
 
   &__copy-main {
@@ -345,6 +377,9 @@ aside {
       font-weight: 700;
       line-height: 1.5;
       margin-top: 30px;
+      @include sp() {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -445,7 +480,7 @@ aside {
       width: calc(100% - 40px);
 
       h1 {
-        font-size: 36px;
+        font-size: 24px;
       }
 
       p {
@@ -470,26 +505,40 @@ aside {
   &__wrap {
     display: flex;
     gap: 80px;
+    @include sp() {
+      display: grid;
+      gap: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__heading {
     flex: 0 0 252px;
     padding-top: 50px;
-
+    @include sp() {
+      padding-top: 0;
+    }
     h2 {
       color: #6c5e4f;
       font-size: 36px;
       font-weight: 700;
       line-height: 1;
       margin-top: 30px;
+      @include sp() {
+        font-size: 28px;
+        margin-top: 20px;
+      }
     }
   }
 
   &__en {
     color: #e5d4c1;
     font-size: 18px;
-
     letter-spacing: 0.05em;
     line-height: 1;
+    @include sp() {
+      font-size: 16px;
+    }
   }
 
   &__content {
@@ -514,6 +563,9 @@ aside {
     display: flex;
     justify-content: flex-end;
     margin-top: 40px;
+    @include sp() {
+      margin-top: 0;
+    }
   }
 
   &__link {
@@ -527,6 +579,9 @@ aside {
       color: #6c5e4f;
       font-size: 16px;
       font-weight: 500;
+      @include sp() {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -565,6 +620,7 @@ aside {
 
   &__gallery-item--last {
     border-top-right-radius: 50px;
+    overflow: hidden;
   }
 
   &__ring {
@@ -603,6 +659,7 @@ aside {
 
     &__gallery {
       margin-top: 48px;
+      margin-right: 20px;
     }
 
     &__gallery-item {
@@ -621,7 +678,6 @@ aside {
   @include sp {
     &__content {
       font-size: 14px;
-
       p {
         margin-bottom: 18px;
       }
@@ -633,16 +689,15 @@ aside {
     }
 
     &__gallery {
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: 36px;
+      margin-top: 50px;
     }
 
     &__gallery-item {
-      height: 180px;
+      height: 115px;
     }
 
     &__gallery-item--last {
-      border-top-right-radius: 0;
+      border-top-right-radius: 18px;
     }
 
     &__ring {
@@ -662,6 +717,10 @@ img {
   height: 42px;
   justify-content: center;
   width: 42px;
+  @include sp() {
+    width: 48px;
+    height: 48px;
+  }
 }
 .sectioin-title {
   &__head {
@@ -697,6 +756,9 @@ img {
     span {
       font-size: 16px;
       font-weight: 500;
+      @include sp() {
+        font-size: 14px;
+      }
     }
   }
 
@@ -709,12 +771,22 @@ img {
     height: 42px;
     justify-content: center;
     width: 42px;
+    @include sp() {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 .new-car-sales {
   margin: 100px 0;
+  @include sp() {
+    margin: 80px 0;
+  }
   &__img {
     margin: 80px 0;
+    img {
+      width: 100%;
+    }
   }
 }
 .tire-change {
@@ -744,10 +816,8 @@ img {
   }
 
   &__card {
-    border: 3px solid #ffffff;
     border-radius: 12px;
     min-height: 220px;
-
     position: relative;
   }
 
@@ -841,14 +911,13 @@ img {
     }
 
     &__cards {
-      gap: 14px;
+      gap: 20px;
       grid-template-columns: 1fr;
       margin-top: 30px;
     }
 
     &__card {
       min-height: 180px;
-      padding: 24px 20px;
     }
 
     &__card-label {
@@ -883,6 +952,9 @@ img {
     overflow: hidden;
     padding: 100px 0 120px;
     position: relative;
+    @include sp() {
+      padding: 80px 0 200px;
+    }
   }
   &__inner {
     margin: 0 auto;
@@ -932,7 +1004,7 @@ img {
   }
 
   @include tb {
-    padding: 72px 0 90px;
+    padding: 0 0 90px;
 
     h2 {
       font-size: 40px;
@@ -950,14 +1022,16 @@ img {
   }
 
   @include sp {
-    padding: 56px 0 72px;
-
     &__en {
       font-size: 14px;
     }
 
     h2 {
       font-size: 32px;
+    }
+
+    &__content {
+      padding: 140px 0 80px;
     }
 
     &__lead {
@@ -985,6 +1059,9 @@ img {
       color: #fff;
       font-size: 36px;
       font-weight: 900;
+      @include sp() {
+        font-size: 26px;
+      }
     }
   }
 
@@ -995,27 +1072,41 @@ img {
 
     .slider-wrapper {
       display: flex;
+      font-size: 0.83vw;
       .slider-slide {
+        width: max(16.25em, 240px);
+        height: 360px;
         &:nth-child(1) {
           order: 3;
+          position: relative;
+          z-index: 3;
+          transform: scale(1.1);
         }
         &:nth-child(2) {
           order: 2;
+          position: relative;
+          left: 10px;
         }
         &:nth-child(3) {
           order: 4;
+          position: relative;
+          z-index: 2;
+          position: relative;
+          right: 10px;
         }
         &:nth-child(4) {
           order: 1;
+          position: relative;
+          left: 30px;
         }
         &:nth-child(5) {
           order: 5;
+          position: relative;
+          right: 30px;
         }
       }
     }
     .myCard {
-      width: 260px;
-      height: 360px;
       background-color: #fff;
       padding: 50px 0;
       box-shadow: 0 4px 20px 0 rgba(34, 34, 34, 0.3);
@@ -1085,18 +1176,26 @@ img {
 .service {
   padding-bottom: 50px;
   position: relative;
+
   &__image {
-    background: rgba(255, 255, 255, 0.28);
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     flex: 1;
-    min-height: 607px;
+    width: 56.875em;
     top: -150px;
     right: 0;
     position: absolute;
+    @include tb() {
+      padding-left: 20px;
+    }
+    @include sp() {
+      top: -200px;
+      max-width: 500px;
+    }
   }
 
   &__content {
+    font-size: 0.83vw;
     align-items: flex-start;
     display: flex;
     gap: 0;
@@ -1335,12 +1434,11 @@ img {
   }
 
   @include sp {
-    --sv-height: 260px;
+    --sv-height: 150px;
     --sv-side-width: 0px;
-    --sv-title-size: 32px;
-
+    --sv-title-size: 20px;
+    margin-left: 20px;
     flex-direction: column-reverse;
-
     &__rail {
       flex-direction: row;
       gap: 20px;
@@ -1377,7 +1475,7 @@ img {
     }
 
     &__title {
-      left: 20px;
+      left: 60px;
     }
   }
 }
@@ -1653,7 +1751,10 @@ img {
 
 .feature-checklist {
   padding: 80px 0;
-
+  @include tb() {
+    display: flex;
+    align-items: center;
+  }
   &__inner {
     margin: 0 auto;
     max-width: 1200px;
@@ -1687,11 +1788,8 @@ img {
 
   &__panel {
     background-color: #ffffff;
-    background-image: linear-gradient(
-        to right,
-        rgba(108, 94, 79, 0.04) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(to right, rgba(108, 94, 79, 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(108, 94, 79, 0.04) 1px, transparent 1px);
     background-size: 18px 18px;
     margin-top: 80px;
@@ -1864,21 +1962,12 @@ img {
   }
 
   &__image-blank {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(245, 239, 232, 0.95) 100%
-    );
     border-radius: 50px;
     min-height: 333px;
     position: relative;
-
-    &::before {
-      border: 1px dashed rgba(181, 159, 134, 0.5);
-      border-radius: inherit;
-      content: "";
-      inset: 20px;
-      position: absolute;
+    overflow: hidden;
+    img {
+      width: 100%;
     }
   }
 
@@ -1923,9 +2012,15 @@ img {
     }
 
     &__item {
+      display: flex;
+      flex-wrap: wrap;
       &:last-child {
         padding-bottom: 0;
       }
+    }
+
+    &__item--reverse {
+      flex-wrap: wrap-reverse;
     }
 
     &__content {
@@ -2048,19 +2143,10 @@ img {
   }
 
   &__image-blank {
-    background: linear-gradient(135deg, #f3ebe2 0%, #ffffff 100%);
     border-radius: 16px;
     height: 58px;
     position: relative;
     width: 100px;
-
-    &::before {
-      border: 1px dashed rgba(181, 159, 134, 0.55);
-      border-radius: inherit;
-      content: "";
-      inset: 6px;
-      position: absolute;
-    }
   }
 
   &__cell {
@@ -2068,7 +2154,6 @@ img {
     color: #6c5e4f;
     display: flex;
     font-size: 24px;
-
     font-weight: 500;
     justify-content: center;
     line-height: 1.4;
@@ -2319,7 +2404,6 @@ img {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   &__card {
@@ -2874,14 +2958,6 @@ img {
     height: 58px;
     position: relative;
     width: 100px;
-
-    &::before {
-      border: 1px dashed rgba(181, 159, 134, 0.55);
-      border-radius: inherit;
-      content: "";
-      inset: 6px;
-      position: absolute;
-    }
   }
 
   &__vehicle-name {
@@ -3185,7 +3261,9 @@ img {
     justify-content: center;
     min-height: 64px;
     padding: 20px;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
 
     &.is-active {
       background: #ef6f76;
@@ -3321,14 +3399,6 @@ img {
     margin: 0 auto 14px;
     position: relative;
     width: 80px;
-
-    &::before {
-      border: 1px dashed rgba(181, 159, 134, 0.55);
-      border-radius: inherit;
-      content: "";
-      inset: 6px;
-      position: absolute;
-    }
   }
 
   &__vehicle-title {
@@ -3608,12 +3678,12 @@ img {
 }
 
 .price-guide-tabs {
-  background: #de7e4d;
   border-radius: 0 0 24px 24px;
   overflow: hidden;
 
   &__tablist {
     display: grid;
+
     gap: 10px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -3628,7 +3698,9 @@ img {
     font-weight: 700;
     min-height: 52px;
     padding: 16px 20px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 
     &.is-active {
       background: #de7e4d;
@@ -3638,7 +3710,7 @@ img {
   &__panel {
     display: none;
     padding: 96px 100px 100px;
-
+    background-color: #de7e4d;
     &.is-active {
       display: block;
     }
@@ -4111,7 +4183,6 @@ img {
   }
 
   &__image-blank {
-    background: linear-gradient(135deg, #f3eee7 0%, #ffffff 100%);
     overflow: hidden;
     position: relative;
 
@@ -4719,17 +4790,9 @@ img {
 
   &__image-blank {
     aspect-ratio: 620 / 414;
-    background: linear-gradient(135deg, #f3eee7 0%, #ffffff 100%);
+
     border-radius: 24px;
     position: relative;
-
-    &::before {
-      border: 1px dashed rgba(228, 124, 74, 0.45);
-      border-radius: inherit;
-      content: "";
-      inset: 12px;
-      position: absolute;
-    }
   }
 
   &__info {
@@ -4854,10 +4917,8 @@ img {
 }
 
 .footer-cta {
-  background: linear-gradient(
-      rgba(188, 171, 150, 0.88),
-      rgba(188, 171, 150, 0.88)
-    ),
+  background:
+    linear-gradient(rgba(188, 171, 150, 0.88), rgba(188, 171, 150, 0.88)),
     radial-gradient(
       circle at 20% 40%,
       rgba(255, 255, 255, 0.16) 0%,
@@ -5183,7 +5244,11 @@ img {
   overflow: hidden;
   padding: 100px 0 0;
   position: relative;
-
+  margin-right: 100px;
+  background-color: #faf8f5;
+  @include sp() {
+    margin-right: 20px;
+  }
   &__head {
     align-items: flex-start;
     display: grid;
@@ -5235,18 +5300,25 @@ img {
   }
 
   &__cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 72px;
-    position: relative;
-    z-index: 2;
-    max-width: 1560px;
+    overflow-x: scroll;
+    > div {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 72px;
+      position: relative;
+      z-index: 2;
+      width: 1560px;
+      @include sp() {
+        margin-right: 20px;
+        display: flex;
+        gap: 5px;
+        width: fit-content;
+      }
+    }
   }
 
   &__card {
-    width: 380px;
     align-items: flex-end;
-    background-color: #d7cec4;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -5258,17 +5330,17 @@ img {
     padding: 0 24px 28px;
     position: relative;
     text-decoration: none;
-
+    @include sp() {
+      width: 145px;
+    }
     &:last-child {
       border-radius: 0 50px 50px 0;
+      @include sp() {
+        border-radius: 0 30px 30px 0;
+      }
     }
 
     &::before {
-      background: linear-gradient(
-        180deg,
-        rgba(15, 11, 8, 0.02) 0%,
-        rgba(15, 11, 8, 0.46) 100%
-      );
       content: "";
       inset: 0;
       position: absolute;
@@ -5383,8 +5455,10 @@ img {
     }
 
     &__cards {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-top: 30px;
+      margin-top: 0px;
+      > div {
+        margin-top: 50px;
+      }
     }
 
     &__card {
@@ -5394,13 +5468,19 @@ img {
     }
 
     &__card-title {
-      font-size: 20px;
+      font-size: 16px;
+      white-space: nowrap;
     }
 
     &__card-arrow {
       font-size: 16px;
       height: 36px;
       width: 36px;
+    }
+
+    .link-icon {
+      width: 26px;
+      height: 26px;
     }
   }
 }
@@ -5411,16 +5491,22 @@ img {
 .top-recruit-teaser {
   background: #b9a58f;
   overflow: hidden;
-  padding: 50px 0 0;
+  padding: 50px 0 23.125em;
   position: relative;
-
+  @include sp() {
+    padding: 50px 0 180px;
+  }
+  .section__link {
+    span {
+      color: #fff;
+    }
+  }
   &__head {
-    align-items: start;
-    display: grid;
-    gap: 80px;
-    grid-template-columns: 200px minmax(0, 1fr);
-    position: relative;
-    z-index: 2;
+    display: flex;
+    align-items: center;
+    @include sp() {
+      display: grid;
+    }
   }
 
   &__title-block {
@@ -5479,27 +5565,18 @@ img {
 }
 
 .top-recruit-visual {
-  background: #b9a58f;
-  padding-bottom: 72px;
-
-  &__image-blank {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.22) 0%,
-      rgba(255, 255, 255, 0.08) 100%
-    );
+  position: relative;
+  &__image {
+    max-width: 1350px;
+    margin-left: 100px;
+    text-align: right;
+    position: absolute;
+    z-index: 2;
     border-top-left-radius: 32px;
-    height: 420px;
-    margin-left: auto;
-    max-width: calc(100% - 300px);
-    position: relative;
-
-    &::before {
-      border: 1px dashed rgba(255, 255, 255, 0.38);
-      border-radius: inherit;
-      content: "";
-      inset: 16px;
-      position: absolute;
+    right: 0;
+    top: -18.75em;
+    @include sp() {
+      top: -140px;
     }
   }
 }
@@ -5507,9 +5584,11 @@ img {
 .top-news {
   background: #ffffff;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 35rem 0 100px;
   position: relative;
-
+  @include sp() {
+    padding: 170px 0 50px;
+  }
   &__inner {
     display: grid;
     gap: 48px;
@@ -5737,7 +5816,7 @@ img {
   }
 
   .top-recruit-visual {
-    padding-bottom: 40px;
+    padding-bottom: 00px;
 
     &__image-blank {
       border-top-left-radius: 24px;
@@ -5747,7 +5826,7 @@ img {
   }
 
   .top-news {
-    padding: 48px 0;
+    padding: 170px 0 50px;
 
     &__en {
       font-size: 14px;
@@ -5919,11 +5998,13 @@ img {
   }
 
   @include sp {
-    padding: 48px 0;
-
-    &__grid {
+    padding: 170px 0 &__grid {
       gap: 28px;
       grid-template-columns: 1fr;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
     &__column {

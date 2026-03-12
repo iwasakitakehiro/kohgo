@@ -4,7 +4,7 @@
     <div class="sub-visual__canvas">
       <div class="sub-visual__image-blank" aria-hidden="true"></div>
 
-      <h1 class="sub-visual__title">カーラッピング</h1>
+      <h1 class="sub-visual__title">車検</h1>
     </div>
   </section>
 

@@ -8,7 +8,7 @@
                 </div>
                 <div class="mv__copy-main">
                     <h1>守り、支える。<br>愛車と、あなたを。</h1>
-                    <p>茂原市クルマのかかりつけ医「オートサービス向後」</p>
+                    <p>茂原市クルマのかかりつけ医<br class="sp-show">「オートサービス向後」</p>
                 </div>
 
                 <div class="mv__copy-sub">
@@ -48,10 +48,18 @@
             </div>
         </div>
         <div class="about__gallery" aria-hidden="true">
-            <div class="about__gallery-item"></div>
-            <div class="about__gallery-item"></div>
-            <div class="about__gallery-item"></div>
-            <div class="about__gallery-item about__gallery-item--last"></div>
+            <div class="about__gallery-item">
+                <img src="<?= get_template_directory_uri(); ?>/img/top/about01.png" alt="">
+            </div>
+            <div class="about__gallery-item">
+                <img src="<?= get_template_directory_uri(); ?>/img/top/about02.png" alt="">
+            </div>
+            <div class="about__gallery-item">
+                <img src="<?= get_template_directory_uri(); ?>/img/top/about03.png" alt="">
+            </div>
+            <div class="about__gallery-item about__gallery-item--last">
+                <img src="<?= get_template_directory_uri(); ?>/img/top/about04.png" alt="">
+            </div>
         </div>
     </section>
 
@@ -183,7 +191,7 @@
                     <div class="section__heading">
                         <p class="section__en">NEW CAR SALES</p>
                         <h2>新車販売</h2>
-                        <div class="section__link-wrap">
+                        <div class="section__link-wrap pc-show">
                             <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
                                 <span>詳細はこちら</span>
                                 <span class="link-icon" aria-hidden="true">
@@ -200,11 +208,24 @@
                         頭金0円、しかも車検･税金･保険もコミコミの「コアラクラブユーカリプラン」をご提供。<br>
                         毎月フラット支払いでクルマを所有いただけます。
                     </div>
+                    <div class="section__link-wrap sp-show">
+                        <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
+                            <span>詳細はこちら</span>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="inner">
+            <div>
                 <div class="new-car-sales__img">
-                    <img src="<?= get_template_directory_uri(); ?>/img/top/new-car-sales.png">
+                    <img class="pc-show" src="<?= get_template_directory_uri(); ?>/img/top/new-car-sales.png">
+                    <img class="sp-show" src="<?= get_template_directory_uri(); ?>/img/top/new-car-sales-sp.png">
                 </div>
             </div>
         </div>
@@ -218,7 +239,7 @@
                         <p class="section__en">TIRE CHANGE</p>
                         <h2>タイヤ交換</h2>
 
-                        <div class="section__link-wrap">
+                        <div class="section__link-wrap pc-show">
                             <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
                                 <span>詳細はこちら</span>
                                 <span class="link-icon" aria-hidden="true">
@@ -236,7 +257,18 @@
                     </div>
                 </div>
             </div>
+            <div class="section__link-wrap sp-show">
+                <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
+                    <span>詳細はこちら</span>
+                    <span class="link-icon" aria-hidden="true">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                            <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                        </svg>
 
+                    </span>
+                </a>
+            </div>
             <div class="tire-change__cards" aria-hidden="true">
                 <article class="tire-change__card tire-change__card--summer">
                     <a href="#">
@@ -250,6 +282,7 @@
                     </a>
                 </article>
             </div>
+
         </div>
         <p class="tire-change__bg-text" aria-hidden="true">TIRE<br>CHANGE</p>
     </section>
@@ -377,45 +410,47 @@
         </div>
         <p class="top-maintenance__bg-text" aria-hidden="true">MAINTENANCE</p>
         <div class="top-maintenance__cards">
-            <a class="top-maintenance__card top-maintenance__card--engine" href="<?= get_home_url(); ?>/maintenance#engine">
-                <span class="top-maintenance__card-title">エンジン</span>
-                <span class="link-icon" aria-hidden="true">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
-                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
-                    </svg>
-                </span>
-            </a>
-            <a class="top-maintenance__card top-maintenance__card--brake" href="<?= get_home_url(); ?>/maintenance#brake">
-                <span class="top-maintenance__card-title">ブレーキ</span>
-                <span class="link-icon" aria-hidden="true">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
-                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
-                    </svg>
+            <div>
+                <a class="top-maintenance__card top-maintenance__card--engine" href="<?= get_home_url(); ?>/maintenance#engine">
+                    <span class="top-maintenance__card-title">エンジン</span>
+                    <span class="link-icon" aria-hidden="true">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
+                            <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                        </svg>
+                    </span>
+                </a>
+                <a class="top-maintenance__card top-maintenance__card--brake" href="<?= get_home_url(); ?>/maintenance#brake">
+                    <span class="top-maintenance__card-title">ブレーキ</span>
+                    <span class="link-icon" aria-hidden="true">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
+                            <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                        </svg>
 
-                </span>
-            </a>
-            <a class="top-maintenance__card top-maintenance__card--tire" href="<?= get_home_url(); ?>/maintenance#tire">
-                <span class="top-maintenance__card-title">タイヤ</span>
-                <span class="link-icon" aria-hidden="true">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
-                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
-                    </svg>
+                    </span>
+                </a>
+                <a class="top-maintenance__card top-maintenance__card--tire" href="<?= get_home_url(); ?>/maintenance#tire">
+                    <span class="top-maintenance__card-title">タイヤ</span>
+                    <span class="link-icon" aria-hidden="true">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
+                            <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                        </svg>
 
-                </span>
-            </a>
-            <a class="top-maintenance__card top-maintenance__card--other" href="<?= get_home_url(); ?>/maintenance#other">
-                <span class="top-maintenance__card-title">その他</span>
-                <span class="link-icon" aria-hidden="true">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
-                        <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
-                    </svg>
+                    </span>
+                </a>
+                <a class="top-maintenance__card top-maintenance__card--other" href="<?= get_home_url(); ?>/maintenance#other">
+                    <span class="top-maintenance__card-title">その他</span>
+                    <span class="link-icon" aria-hidden="true">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="2.5" width="43" height="43" rx="21.5" stroke="white" />
+                            <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                        </svg>
 
-                </span>
-            </a>
+                    </span>
+                </a>
+            </div>
         </div>
     </section>
     <section class="used-car-sales">
@@ -426,7 +461,7 @@
                         <p class="section__en">USED CAR SALES</p>
                         <h2>中古車販売</h2>
 
-                        <div class="section__link-wrap">
+                        <div class="section__link-wrap pc-show">
                             <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
                                 <span>詳細はこちら</span>
                                 <span class="link-icon" aria-hidden="true">
@@ -442,6 +477,18 @@
                     <div class="section__content">
                         <p>お客様のライフスタイルに合った1台を、一緒にお探しします。仕入れから点検・納車まで自社でしっかり対応。<br>ご購入後も車検や整備で長く安心して乗っていただけます。</p>
                     </div>
+                    <div class="section__link-wrap sp-show">
+                        <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
+                            <span>詳細はこちら</span>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -449,18 +496,38 @@
     <section class="top-recruit-teaser">
         <div class="inner">
             <div class="top-recruit-teaser__head">
-                <div class="top-recruit-teaser__title-block">
+                <div class="section__heading top-recruit-teaser__title-block">
                     <p class="top-recruit-teaser__en">RECRUIT</p>
                     <h2>採用情報</h2>
-                    <a class="top-recruit-teaser__link" href="<?= get_home_url(); ?>/recruit">
-                        <span>詳細はこちら</span>
-                        <span class="link-icon" aria-hidden="true">→</span>
-                    </a>
+                    <div class="section__link-wrap pc-show">
+                        <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
+                            <span>詳細はこちら</span>
+                            <span class="link-icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                    <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                                </svg>
+
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="top-recruit-teaser__lead">
                     <p>当社では、お客様のカーライフを総合的にサポートするため、</p>
                     <p>カーラッピング・カーリース・車検・鈑金・リモートサービス・自動車保険など、</p>
                     <p>多様なサービスをワンストップでご提供しております。</p>
+                </div>
+                <div class="section__link-wrap sp-show">
+                    <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
+                        <span>詳細はこちら</span>
+                        <span class="link-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                            </svg>
+
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -468,7 +535,9 @@
     </section>
 
     <section class="top-recruit-visual" aria-hidden="true">
-        <div class="top-recruit-visual__image-blank"></div>
+        <div class="top-recruit-visual__image">
+            <img src="<?= get_template_directory_uri(); ?>/img/top/recruit.png" alt="">
+        </div>
     </section>
 
     <section class="top-news">
@@ -476,10 +545,18 @@
             <div class="top-news__head">
                 <p class="top-news__en">INFORMATION</p>
                 <h2>お知らせ</h2>
-                <a class="top-news__link" href="<?= get_home_url(); ?>/news">
-                    <span>一覧をみる</span>
-                    <span class="link-icon" aria-hidden="true">→</span>
-                </a>
+                <div class="section__link-wrap pc-show">
+                    <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
+                        <span>詳細はこちら</span>
+                        <span class="link-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                                <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                            </svg>
+
+                        </span>
+                    </a>
+                </div>
             </div>
             <div class="top-news__list">
                 <article class="top-news__item">
@@ -512,6 +589,18 @@
                         <p class="top-news__date">2026.01.01</p>
                     </div>
                 </article>
+            </div>
+            <div class="section__link-wrap sp-show">
+                <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
+                    <span>詳細はこちら</span>
+                    <span class="link-icon" aria-hidden="true">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="42" height="42" rx="21" fill="#6C5E4F" />
+                            <path d="M32.5303 24.5303C32.8232 24.2374 32.8232 23.7626 32.5303 23.4697L27.7574 18.6967C27.4645 18.4038 26.9896 18.4038 26.6967 18.6967C26.4038 18.9896 26.4038 19.4645 26.6967 19.7574L30.9393 24L26.6967 28.2426C26.4038 28.5355 26.4038 29.0104 26.6967 29.3033C26.9896 29.5962 27.4645 29.5962 27.7574 29.3033L32.5303 24.5303ZM16 24V24.75H32V24V23.25H16V24Z" fill="white" />
+                        </svg>
+
+                    </span>
+                </a>
             </div>
         </div>
         <p class="top-news__bg-text" aria-hidden="true">NEW CAR LIFE</p>

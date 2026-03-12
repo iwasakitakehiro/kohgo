@@ -46,7 +46,9 @@
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service/01.png" alt="">
+            </div>
           </div>
         </article>
 
@@ -63,7 +65,9 @@
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service/02.png" alt="">
+            </div>
           </div>
         </article>
 
@@ -80,7 +84,9 @@
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service/03.png" alt="">
+            </div>
           </div>
         </article>
 
@@ -97,7 +103,9 @@
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service/04.png" alt="">
+            </div>
           </div>
         </article>
       </div>
@@ -121,7 +129,9 @@
         <div class="data-table__body">
           <div class="data-table__row">
             <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
+              <div class="data-table__image-blank" aria-hidden="true">
+                <img src="<?= get_template_directory_uri(); ?>/img/service/kei.png" alt="">
+              </div>
               <p class="data-table__label-text">軽自動車／コンパクトカー</p>
             </div>
             <div class="data-table__cell">350,000円〜</div>
@@ -130,7 +140,9 @@
 
           <div class="data-table__row">
             <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
+              <div class="data-table__image-blank" aria-hidden="true">
+                <img src="<?= get_template_directory_uri(); ?>/img/service/normal.png" alt="">
+              </div>
               <p class="data-table__label-text">普通車</p>
             </div>
             <div class="data-table__cell">450,000円〜</div>
@@ -139,7 +151,9 @@
 
           <div class="data-table__row">
             <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
+              <div class="data-table__image-blank" aria-hidden="true">
+                <img src="<?= get_template_directory_uri(); ?>/img/service/normal2.png" alt="">
+              </div>
               <p class="data-table__label-text">ミニバン</p>
             </div>
             <div class="data-table__cell">500,000円〜</div>
@@ -148,7 +162,9 @@
 
           <div class="data-table__row">
             <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
+              <div class="data-table__image-blank" aria-hidden="true">
+                <img src="<?= get_template_directory_uri(); ?>/img/service/normal3.png" alt="">
+              </div>
               <p class="data-table__label-text">ワンボックス／4WD</p>
             </div>
             <div class="data-table__cell">600,000円〜</div>
