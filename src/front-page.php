@@ -446,5 +446,93 @@
             </div>
         </div>
     </section>
+    <section class="top-recruit-teaser">
+        <div class="inner">
+            <div class="top-recruit-teaser__head">
+                <div class="top-recruit-teaser__title-block">
+                    <p class="top-recruit-teaser__en">RECRUIT</p>
+                    <h2>採用情報</h2>
+                    <a class="top-recruit-teaser__link" href="<?= get_home_url(); ?>/recruit">
+                        <span>詳細はこちら</span>
+                        <span class="link-icon" aria-hidden="true">→</span>
+                    </a>
+                </div>
+                <div class="top-recruit-teaser__lead">
+                    <p>当社では、お客様のカーライフを総合的にサポートするため、</p>
+                    <p>カーラッピング・カーリース・車検・鈑金・リモートサービス・自動車保険など、</p>
+                    <p>多様なサービスをワンストップでご提供しております。</p>
+                </div>
+            </div>
+        </div>
+        <p class="top-recruit-teaser__bg-text" aria-hidden="true">RECRUIT</p>
+    </section>
+
+    <section class="top-recruit-visual" aria-hidden="true">
+        <div class="top-recruit-visual__image-blank"></div>
+    </section>
+
+    <section class="top-news">
+        <div class="inner top-news__inner">
+            <div class="top-news__head">
+                <p class="top-news__en">INFORMATION</p>
+                <h2>お知らせ</h2>
+                <a class="top-news__link" href="<?= get_home_url(); ?>/news">
+                    <span>一覧をみる</span>
+                    <span class="link-icon" aria-hidden="true">→</span>
+                </a>
+            </div>
+            <div class="top-news__list">
+                <article class="top-news__item">
+                    <div class="top-news__thumb">
+                        <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
+                    </div>
+                    <div class="top-news__content">
+                        <span class="top-news__category top-news__category--used">中古車情報</span>
+                        <h3 class="top-news__title">【入荷】ワゴンR：袖ヶ浦000 あ0000　白</h3>
+                        <p class="top-news__date">2026.01.01</p>
+                    </div>
+                </article>
+                <article class="top-news__item">
+                    <div class="top-news__thumb">
+                        <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
+                    </div>
+                    <div class="top-news__content">
+                        <span class="top-news__category top-news__category--info">お知らせ</span>
+                        <h3 class="top-news__title">年末年始休業のお知らせ</h3>
+                        <p class="top-news__date">2026.01.01</p>
+                    </div>
+                </article>
+                <article class="top-news__item">
+                    <div class="top-news__thumb">
+                        <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
+                    </div>
+                    <div class="top-news__content">
+                        <span class="top-news__category top-news__category--campaign">キャンペーン</span>
+                        <h3 class="top-news__title">車検の「早割サービス」実施中！</h3>
+                        <p class="top-news__date">2026.01.01</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <p class="top-news__bg-text" aria-hidden="true">NEW CAR LIFE</p>
+    </section>
+    <section class="top-social-showcase">
+        <div class="inner">
+            <div class="top-social-showcase__grid">
+                <article class="top-social-showcase__column">
+                    <h2 class="top-social-showcase__title">Instagram</h2>
+                    <div class="top-social-showcase__frame top-social-showcase__frame--instagram" aria-hidden="true">
+                        <div class="top-social-showcase__screen"></div>
+                    </div>
+                </article>
+                <article class="top-social-showcase__column">
+                    <h2 class="top-social-showcase__title">TikTok</h2>
+                    <div class="top-social-showcase__frame top-social-showcase__frame--tiktok" aria-hidden="true">
+                        <div class="top-social-showcase__screen"></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
