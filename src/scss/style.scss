@@ -223,6 +223,10 @@ header {
 }
 
 #hamburger {
+  display: none;
+  @include tb() {
+    display: block;
+  }
 }
 
 .hamburger {
@@ -7344,8 +7348,8 @@ img {
   box-shadow: 0 18px 48px rgba(57, 40, 22, 0.08);
   left: 0;
   padding: 100px 0;
-  position: absolute;
-  top: 100%;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 40;
   &__inner {
