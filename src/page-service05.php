@@ -1,6 +1,6 @@
 ﻿<?php get_header(); ?>
 <main class="page-shell">
-  <section class="sub-visual sub-visual--service">
+  <section class="sub-visual sub-visual--service05">
     <div class="sub-visual__canvas">
       <div class="sub-visual__image-blank" aria-hidden="true"></div>
 
@@ -30,70 +30,54 @@
         <article class="content-media__item">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">いつでも対応が可能！</p>
+              <h2 class="content-media__title">年末年始以外、年中無休！</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              ディーラーやプロ代理店は毎週の定休日があるため、いざという時にすぐ連絡が取れない場合があります。オートサービス向後では万が一のトラブルにも迅速に対応できる体制を整えており、事故やトラブル発生時にもスムーズなご案内が可能です。安心してお任せください。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service05/01.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item content-media__item--reverse">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
+              <p class="content-media__eyebrow">レッカー車･レンタカー自社所有！</p>
+              <h2 class="content-media__title">事故や故障の際は電話一本で手配完了</h2>
             </div>
             <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
+              事故やトラブルが発生した際、ロードサービスの手配、代車の準備、保険会社への連絡など、「どこに連絡すればいいの？」と迷ってしまう方は少なくありません。オートサービス向後では窓口を一本化し、所有のレッカー車で現場へ駆け付けます。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service05/02.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">事故時のアドバイスや保険会社との交渉はおまかせ</p>
+              <h2 class="content-media__title">専任スタッフが常駐</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              保険会社からの説明が専門的でわかりづらい場合も、オートサービス向後が間に入り、内容をわかりやすくご説明・サポートいたします。複雑な手続きも代行またはしっかりフォローいたしますので、安心して進めていただけます。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service05/03.png" alt="">
+            </div>
           </div>
         </article>
 
-        <article class="content-media__item content-media__item--reverse">
-          <div class="content-media__content">
-            <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
-            </div>
-            <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
-            </p>
-          </div>
-          <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -108,12 +92,20 @@
 
         <div class="insurance-notice">
           <div class="insurance-notice__headline">
-            <span class="insurance-notice__icon" aria-hidden="true"></span>
+            <span class="insurance-notice__icon" aria-hidden="true">
+              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 36.119C27.9411 36.119 36 28.2306 36 18.4999C36 8.76918 27.9411 0.880859 18 0.880859C8.05887 0.880859 0 8.76918 0 18.4999C0 28.2306 8.05887 36.119 18 36.119Z" fill="#FDD23E" />
+                <path d="M11 18.5L15.6667 23L25 14" stroke="#DE7241" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
             <p class="insurance-notice__headline-text">販売員全員が “保険販売資格” を保有しています</p>
           </div>
 
           <div class="insurance-notice__panel">
-            <div class="insurance-notice__image-blank" aria-hidden="true"></div>
+            <div class="insurance-notice__image-blank" aria-hidden="true">
+              <img src="<?= get_template_directory_uri(); ?>/img/service05/car-insurance-info.png" alt="">
+            </div>
             <div class="insurance-notice__body">
               <p>近年の自動車保険は複雑化しており、「よく分からない」などお困りになった事などございませんか？</p>
               <p>オートサービス向後には「プロ代理店」が所属しています。</p>
@@ -127,18 +119,42 @@
           <div class="insurance-carrier-list__panel">
             <div class="insurance-carrier-list__grid">
               <article class="insurance-carrier-card">
-                <div class="insurance-carrier-card__logo-blank" aria-hidden="true"></div>
-                <a class="insurance-carrier-card__link" href="https://www.sompo-japan.co.jp/" target="_blank" rel="noopener noreferrer">損保ジャパン株式会社</a>
+                <div class="insurance-carrier-card__logo-blank" aria-hidden="true">
+                  <img src="<?= get_template_directory_uri(); ?>/img/service05/company1.png" alt="">
+                </div>
+                <a class="insurance-carrier-card__link" href="https://www.sompo-japan.co.jp/" target="_blank" rel="noopener noreferrer">損保ジャパン株式会社
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.25 7.58333V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V2.91667C1.75 2.60725 1.87292 2.3105 2.09171 2.09171C2.3105 1.87292 2.60725 1.75 2.91667 1.75H6.41667" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.25 1.75L7 7" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.75 1.75H12.25V5.25" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
               </article>
 
               <article class="insurance-carrier-card">
-                <div class="insurance-carrier-card__logo-blank" aria-hidden="true"></div>
-                <a class="insurance-carrier-card__link" href="https://www.ms-ins.com/" target="_blank" rel="noopener noreferrer">三井住友海上火災保険会社</a>
+                <div class="insurance-carrier-card__logo-blank" aria-hidden="true">
+                  <img src="<?= get_template_directory_uri(); ?>/img/service05/company2.png" alt="">
+                </div>
+                <a class="insurance-carrier-card__link" href="https://www.ms-ins.com/" target="_blank" rel="noopener noreferrer">三井住友海上火災保険会社
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.25 7.58333V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V2.91667C1.75 2.60725 1.87292 2.3105 2.09171 2.09171C2.3105 1.87292 2.60725 1.75 2.91667 1.75H6.41667" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.25 1.75L7 7" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.75 1.75H12.25V5.25" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
               </article>
 
               <article class="insurance-carrier-card">
-                <div class="insurance-carrier-card__logo-blank" aria-hidden="true"></div>
-                <a class="insurance-carrier-card__link" href="https://www.tokiomarine-nichido.co.jp/" target="_blank" rel="noopener noreferrer">東京海上日動火災保険株式会社</a>
+                <div class="insurance-carrier-card__logo-blank" aria-hidden="true">
+                  <img src="<?= get_template_directory_uri(); ?>/img/service05/company3.png" alt="">
+                </div>
+                <a class="insurance-carrier-card__link" href="https://www.tokiomarine-nichido.co.jp/" target="_blank" rel="noopener noreferrer">東京海上日動火災保険株式会社
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.25 7.58333V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V2.91667C1.75 2.60725 1.87292 2.3105 2.09171 2.09171C2.3105 1.87292 2.60725 1.75 2.91667 1.75H6.41667" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.25 1.75L7 7" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.75 1.75H12.25V5.25" stroke="#E17B4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
               </article>
             </div>
           </div>

@@ -1,6 +1,6 @@
 ﻿<?php get_header(); ?>
 <main class="page-shell">
-  <section class="sub-visual sub-visual--service">
+  <section class="sub-visual sub-visual--service04">
     <div class="sub-visual__canvas">
       <div class="sub-visual__image-blank" aria-hidden="true"></div>
 
@@ -22,18 +22,6 @@
         </div>
       </div>
 
-      <div class="feature-checklist__panel">
-        <ul class="feature-checklist__grid">
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>メーカーに無いボディカラーを楽しめる</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>飛び石や虫などからボディーをガード</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>塗装よりも短納期でドレスアップできる</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>剥がせば元通り、車の価値が落ちない</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>車名や広告を入れたりオリジナルの車が作れる</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>目立つので安全運転やマナー運転につながる</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>（色によっては）汚れが目立ちにくい</span></li>
-          <li class="feature-checklist__item"><span class="feature-checklist__icon" aria-hidden="true">✓</span><span>必要な箇所だけ施工できる</span></li>
-        </ul>
-      </div>
     </div>
   </section>
 
@@ -43,68 +31,73 @@
         <article class="content-media__item">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">ご自宅・お仕事場で！</p>
+              <h2 class="content-media__title">リモート車検サービス</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              各車検もリモートで対応しております。
+              6ヶ月・12ヶ月点検および1ヶ月・3ヶ月点検では、安全走行に関わる各部や初期トラブルの有無を確認し、点検・整備を通じて安心してお車にお乗りいただける状態を保ちます。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service04/01.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item content-media__item--reverse">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
+              <p class="content-media__eyebrow">ご自宅・お仕事場で！</p>
+              <h2 class="content-media__title">リモート修理・用品取りサービス</h2>
             </div>
             <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
+              各種カー用品の取付もリモートで対応しております。
+              ドライブレコーダー、カーナビ、ETC、その他の電装機器・カー用品など、ご来店が難しい方でも、お車の引き取りから取付、動作確認まで一括してお任せいただけます。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service04/02.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">ご自宅・お仕事場で！</p>
+              <h2 class="content-media__title">リモート鈑金サービス</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              鈑金修理やガラスリペア、ボディコーティングもリモートで対応しております。お車の引き取りから施工、ご返却まで一括対応のため、ご来店の手間なく修理・メンテナンスが可能です。確かな技術で、美しさと保護性能をしっかりと回復・向上させます。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service04/03.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item content-media__item--reverse">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
+              <p class="content-media__eyebrow">追加費用はありません！</p>
+              <h2 class="content-media__title">引き取り納車・代車無料</h2>
             </div>
             <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
+              オートサービス向後では修理中のお客様にご不便をおかけしないように、
+              修理車両の引き取りと完成後の納車、または持ち込み頂いた場合の代車を
+              無料でご用意しております。
+              <span class="fee-matrix-section__notes"><span>※代車につきましては予約制となっておりますので、あらかじめお問い合わせください</span></span>
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service04/04.png" alt="">
+            </div>
           </div>
         </article>
       </div>
@@ -114,7 +107,7 @@
   <section class="service-flow-section step-flow-section">
     <div class="inner">
       <div class="service-flow-section__heading step-flow-section__heading">
-        <p class="service-flow-section__eyebrow step-flow-section__eyebrow">SERVICE FLOW</p>
+        <p class="service-flow-section__eyebrow step-flow-section__eyebrow">FLOW</p>
         <h2 class="service-flow-section__title step-flow-section__title">リモートサービスの流れ</h2>
       </div>
 
@@ -122,10 +115,10 @@
         <div class="service-flow__item step-flow__item">
           <article class="service-flow__card step-flow__card">
             <div class="service-flow__main step-flow__main">
-              <p class="service-flow__tag step-flow__tag">STEP 01</p>
-              <h3 class="service-flow__title step-flow__title">お問い合わせ</h3>
+              <p class="service-flow__tag step-flow__tag">STEP 1</p>
+              <h3 class="service-flow__title step-flow__title">ご依頼</h3>
             </div>
-            <p class="service-flow__text step-flow__text">お電話・お問い合わせフォームよりご連絡ください。</p>
+            <p class="service-flow__text step-flow__text">困ったらプロにお任せ！なんでもお気軽にご相談ください</p>
           </article>
           <span class="service-flow__arrow step-flow__arrow" aria-hidden="true"></span>
         </div>
@@ -133,10 +126,10 @@
         <div class="service-flow__item step-flow__item">
           <article class="service-flow__card step-flow__card">
             <div class="service-flow__main step-flow__main">
-              <p class="service-flow__tag step-flow__tag">STEP 02</p>
-              <h3 class="service-flow__title step-flow__title">症状確認・お見積り</h3>
+              <p class="service-flow__tag step-flow__tag">STEP 2</p>
+              <h3 class="service-flow__title step-flow__title">リモート診断</h3>
             </div>
-            <p class="service-flow__text step-flow__text">車種・症状を確認し、作業内容と費用の目安をご案内します。</p>
+            <p class="service-flow__text step-flow__text">来店不要！スマホで写真を撮って送るだけのらくらく診断</p>
           </article>
           <span class="service-flow__arrow step-flow__arrow" aria-hidden="true"></span>
         </div>
@@ -144,10 +137,10 @@
         <div class="service-flow__item step-flow__item">
           <article class="service-flow__card step-flow__card">
             <div class="service-flow__main step-flow__main">
-              <p class="service-flow__tag step-flow__tag">STEP 03</p>
-              <h3 class="service-flow__title step-flow__title">日程調整</h3>
+              <p class="service-flow__tag step-flow__tag">STEP 3</p>
+              <h3 class="service-flow__title step-flow__title">用品取り付け・引き取り納車</h3>
             </div>
-            <p class="service-flow__text step-flow__text">ご希望日時を伺い、出張対応または引き取りの日時を決定します。</p>
+            <p class="service-flow__text step-flow__text">ご指定の場所に担当整備士がお伺いいたします</p>
           </article>
           <span class="service-flow__arrow step-flow__arrow" aria-hidden="true"></span>
         </div>
@@ -155,10 +148,10 @@
         <div class="service-flow__item step-flow__item">
           <article class="service-flow__card step-flow__card">
             <div class="service-flow__main step-flow__main">
-              <p class="service-flow__tag step-flow__tag">STEP 04</p>
-              <h3 class="service-flow__title step-flow__title">作業実施</h3>
+              <p class="service-flow__tag step-flow__tag">STEP 4</p>
+              <h3 class="service-flow__title step-flow__title">作業</h3>
             </div>
-            <p class="service-flow__text step-flow__text">現地または工場にて点検・整備を実施し、完了内容をご報告します。</p>
+            <p class="service-flow__text step-flow__text">お仕事やお買い物の合間に作業いたします</p>
           </article>
           <span class="service-flow__arrow step-flow__arrow" aria-hidden="true"></span>
         </div>
@@ -166,10 +159,10 @@
         <div class="service-flow__item step-flow__item">
           <article class="service-flow__card step-flow__card">
             <div class="service-flow__main step-flow__main">
-              <p class="service-flow__tag step-flow__tag">STEP 05</p>
-              <h3 class="service-flow__title step-flow__title">お支払い・お渡し</h3>
+              <p class="service-flow__tag step-flow__tag">STEP 5</p>
+              <h3 class="service-flow__title step-flow__title">お支払い</h3>
             </div>
-            <p class="service-flow__text step-flow__text">作業内容をご確認後、お支払いとお車のお引き渡しを行います。</p>
+            <p class="service-flow__text step-flow__text">その場で現金や各種クレジットカード払いに対応</p>
           </article>
         </div>
       </div>

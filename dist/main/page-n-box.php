@@ -14,7 +14,9 @@
 
       <div class="car-detail__layout">
         <div class="car-detail__visual" aria-hidden="true">
-          <div class="car-detail__image-blank"></div>
+          <div class="car-detail__image-blank">
+            <img src="<?= get_template_directory_uri(); ?>/img/new-car-sales/n-box.png">
+          </div>
         </div>
 
         <div class="car-detail__info">
@@ -46,6 +48,18 @@
             <div class="car-detail__label">総支払額</div>
             <div class="car-detail__value">2,030,000 円(税込)</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="inner">
+        <div class="car-detail__img">
+          <img src="<?= get_template_directory_uri(); ?>/img/new-car-sales/plan.png">
+        </div>
+        <div class="car-detail__img">
+          <img src="<?= get_template_directory_uri(); ?>/img/new-car-sales/fee-table.png">
         </div>
       </div>
     </div>

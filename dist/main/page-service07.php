@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="page-shell">
-  <section class="sub-visual sub-visual--service">
+  <section class="sub-visual sub-visual--service07">
     <div class="sub-visual__canvas">
       <div class="sub-visual__image-blank" aria-hidden="true"></div>
 
@@ -11,8 +11,8 @@
   <section class="feature-checklist">
     <div class="inner">
       <div class="feature-checklist__heading">
-        <p class="feature-checklist__lead">愛車をラッピングする、新たな発想！</p>
-        <h2 class="feature-checklist__title">カーラッピングのメリット</h2>
+        <p class="feature-checklist__lead">必要な時だけ手軽に借りられる！12時間2,525円の格安レンタカー</p>
+        <h2 class="feature-checklist__title">オートサービス向後のレンタカーのポイント</h2>
       </div>
 
     </div>
@@ -24,130 +24,72 @@
         <article class="content-media__item">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">入会金・年会費が無料！</p>
+              <h2 class="content-media__title">公式アプリ利用で最大20%おトクに</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              当社は、全国1500店を超えるレンタカー日本最大のネットワーク、ニコニコレンタカーに加盟しております。全車種オートマETC付！12時間利用で2,525円の格安レンタカー。車1日550円、バイク1日220円、自転車無料にてお預かりも可能です。 また、公式アプリ「ニコパス」からのご利用で、最大20%おトクに！
             </p>
+            <div>
+              <a href="https://www.2525r.com/guide/nicopass/">
+                <img src="<?= get_template_directory_uri(); ?>/img/service07/niconico-app.png" alt="">
+              </a>
+            </div>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service07/01.png" alt="">
+            </div>
+          </div>
+        </article>
+
+        <article class="content-media__item content-media__item--reverse content-media__item--full">
+          <div class="content-media__content content-media__content">
+            <div class="content-media__heading">
+              <p class="content-media__eyebrow">万が一の事故時に発生する免責額のご負担を免除</p>
+              <h2 class="content-media__title">安心な補償オプション</h2>
+            </div>
+            <div class="content-media__plan">
+              <div class="content-media__table">
+                <div>
+                  <span>免責補償制度加入料</span>
+                  <span>1,100円／24時間</span>
+                </div>
+                <div>
+                  <span>免責補償プラス加入料</span>
+                  <span>1,650円／24時間</span>
+                </div>
+              </div>
+              <p>※この制度は保険ではありません。※自損事故の場合、車両免責額への補償は適用されません。<br>※過去に事故歴があり当社が不適合と認めた方は加入できません。※パーフェクト補償の取り扱いはしておりません。</p>
+              <div class="niconico-table">
+                <img src="<?= get_template_directory_uri(); ?>/img/service07/price-table.png" alt="">
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="content-media__item content-media__item--reverse">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
+              <p class="content-media__eyebrow">ちょっとした荷物の移動や簡単な引っ越しなどに</p>
+              <h2 class="content-media__title">軽トラ・軽ワンボックスもご用意</h2>
             </div>
             <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
+              ソファ・タンス・テレビなどの運搬で大活躍！
+              オートマ車なので、運転もラクラクに行えます。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service07/02.png" alt="">
+            </div>
           </div>
         </article>
 
-        <article class="content-media__item">
-          <div class="content-media__content">
-            <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
-            </div>
-            <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
-            </p>
-          </div>
-          <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
-          </div>
-        </article>
-
-        <article class="content-media__item content-media__item--reverse">
-          <div class="content-media__content">
-            <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
-            </div>
-            <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
-            </p>
-          </div>
-          <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
-          </div>
-        </article>
       </div>
     </div>
   </section>
 
-  <section class="data-table-section page-block">
-    <div class="inner">
-      <div class="data-table-section__heading">
-        <p class="data-table-section__eyebrow">PRICE LIST</p>
-        <h2 class="data-table-section__title">カーラッピング料金表</h2>
-      </div>
-
-      <div class="data-table">
-        <div class="data-table__header">
-          <div class="data-table__header-cell data-table__header-cell--label" aria-hidden="true"></div>
-          <div class="data-table__header-cell">グロス・メタリック・パール・マット・サテン 55色</div>
-          <div class="data-table__header-cell data-table__header-cell--accent">マットメタリック・ブラッシュド・カーボン 35色</div>
-        </div>
-
-        <div class="data-table__body">
-          <div class="data-table__row">
-            <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
-              <p class="data-table__label-text">軽自動車／コンパクトカー</p>
-            </div>
-            <div class="data-table__cell">350,000円〜</div>
-            <div class="data-table__cell">450,000円〜</div>
-          </div>
-
-          <div class="data-table__row">
-            <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
-              <p class="data-table__label-text">普通車</p>
-            </div>
-            <div class="data-table__cell">450,000円〜</div>
-            <div class="data-table__cell">550,000円〜</div>
-          </div>
-
-          <div class="data-table__row">
-            <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
-              <p class="data-table__label-text">ミニバン</p>
-            </div>
-            <div class="data-table__cell">500,000円〜</div>
-            <div class="data-table__cell">650,000円〜</div>
-          </div>
-
-          <div class="data-table__row">
-            <div class="data-table__label">
-              <div class="data-table__image-blank" aria-hidden="true"></div>
-              <p class="data-table__label-text">ワンボックス／4WD</p>
-            </div>
-            <div class="data-table__cell">600,000円〜</div>
-            <div class="data-table__cell">750,000円〜</div>
-          </div>
-        </div>
-      </div>
-
-      <p class="data-table-section__note">※上記は料金の目安になります。詳細のお見積りをご希望の場合は、お問い合わせください。</p>
-    </div>
-  </section>
 
   <section class="message-banner page-block">
     <div class="inner">

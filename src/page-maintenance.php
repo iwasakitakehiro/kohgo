@@ -197,7 +197,7 @@ $price_guide_panels = [
 ];
 ?>
 <main class="page-shell">
-  <section class="sub-visual sub-visual--service">
+  <section class="sub-visual sub-visual--maintenance">
     <div class="sub-visual__canvas">
       <div class="sub-visual__image-blank" aria-hidden="true"></div>
       <p class="sub-visual__watermark" aria-hidden="true">MAINTENANCE</p>

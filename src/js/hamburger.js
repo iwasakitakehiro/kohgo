@@ -1,4 +1,4 @@
-class Hamburger {
+﻿class Hamburger {
   constructor({ target, navigation }) {
     this.button = document.querySelector(target);
     this.navigation = document.querySelector(navigation);
@@ -22,11 +22,13 @@ class Hamburger {
 
   open() {
     this.navigation.classList.add("active");
+    this.navigation.dispatchEvent(new CustomEvent("hamburger:open"));
     this.isOpen = true;
   }
 
   close() {
     this.navigation.classList.remove("active");
+    this.navigation.dispatchEvent(new CustomEvent("hamburger:close"));
     this.isOpen = false;
   }
 }

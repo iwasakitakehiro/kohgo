@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 <main class="page-shell">
-  <section class="sub-visual sub-visual--service">
+  <section class="sub-visual sub-visual--service03">
     <div class="sub-visual__canvas">
       <div class="sub-visual__image-blank" aria-hidden="true"></div>
 
-      <h1 class="sub-visual__title">カーラッピング</h1>
+      <h1 class="sub-visual__title">鈑金</h1>
     </div>
   </section>
 
   <section class="feature-checklist">
     <div class="inner">
       <div class="feature-checklist__heading">
-        <p class="feature-checklist__lead">お客様の安心と安全を一番に考えております</p>
-        <h2 class="feature-checklist__title">オートサービス向後の車検の特徴</h2>
+        <p class="feature-checklist__lead">お客様のご要望に応じて最適な方法をご提案</p>
+        <h2 class="feature-checklist__title">オートサービス向後の鈑金の特徴</h2>
       </div>
 
 
@@ -21,71 +21,57 @@
   <section class="content-media">
     <div class="inner">
       <div class="content-media__list">
-        <article class="content-media__item">
+        <article class="content-media__item ">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">追加費用はありません！</p>
+              <h2 class="content-media__title">引き取り納車・代車無料</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              オートサービス向後では修理中のお客様にご不便をおかけしないように、
+              修理車両の引き取りと完成後の納車、または持ち込み頂いた場合の代車を
+              無料でご用意しております。
+              <span class="fee-matrix-section__notes"><span>※代車につきましては予約制となっておりますので、あらかじめお問い合わせください</span></span>
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service03/01.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item content-media__item--reverse">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
+              <p class="content-media__eyebrow">トータルコスト削減のための</p>
+              <h2 class="content-media__title">中古パーツを使った格安修理も可能</h2>
             </div>
             <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
+              自動車を新品同様に修理するには、新品のパーツを使用するのがベストですが、その分修理費用も高くなってしまいます。オートサービス向後では「修理費用をできるだけ抑えたい！」そんなお客様のご要望に応じて、中古パーツやリビルトパーツを使用することも可能です。自動車の状況や修理の内容、お客様のご要望に応じて最適な方法をご提案いたします！
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service03/02.png" alt="">
+            </div>
           </div>
         </article>
 
         <article class="content-media__item">
           <div class="content-media__content">
             <div class="content-media__heading">
-              <p class="content-media__eyebrow">自分の好みに着せ替え</p>
-              <h2 class="content-media__title">個性を引き出す、豊富なバリエーション</h2>
+              <p class="content-media__eyebrow">旅先や仕事先でも大丈夫！</p>
+              <h2 class="content-media__title">千葉県全域・県外も対応</h2>
             </div>
             <p class="content-media__text">
-              メーカーにないカラーを楽しめるメタリック、クローム、マット、カーボン調など、
-              100色以上ものカラーバリエーションをご用意致しております。
-              愛車を純正品にはない色や質感にドレスアップできます。
+              キャリアカー完備で駆けつけます！当社の基本対応エリアは千葉県全域です。県外のお客様も対応可能です。お気軽にご相談ください。
             </p>
           </div>
           <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
-          </div>
-        </article>
-
-        <article class="content-media__item content-media__item--reverse">
-          <div class="content-media__content">
-            <div class="content-media__heading">
-              <p class="content-media__eyebrow">愛車を傷や汚れから保護</p>
-              <h2 class="content-media__title">厚みのあるフィルムでボディをガード</h2>
+            <div class="content-media__image-blank">
+              <img src="<?= get_template_directory_uri(); ?>/img/service03/03.png" alt="">
             </div>
-            <p class="content-media__text">
-              飛び石等による傷や虫等による汚れ、直射日光から愛車のボディを保護します。
-              厚みのある丈夫なフィルムなので、特に新車時に施工しておけば、
-              新車時の状態を長く保てます。
-            </p>
-          </div>
-          <div class="content-media__media" aria-hidden="true">
-            <div class="content-media__image-blank"></div>
           </div>
         </article>
       </div>
