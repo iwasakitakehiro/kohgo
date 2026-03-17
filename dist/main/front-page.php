@@ -519,25 +519,23 @@ $json = json_decode($contents);
         </div>
         <div class="used-car-sales__lists">
             <?php for ($i = 0; $i < count($json); $i++) : ?>
-                <li>
-                    <a href="https://www.carsensor.net<?php echo $json[$i]->url ?>" target="_blank">
-                        <div>
-                            <img src="<?php echo $json[$i]->thmbnail ?>">
+                <li class="used-car-sales__item">
+                    <a class="used-car-sales__card" href="https://www.carsensor.net<?php echo $json[$i]->url ?>" target="_blank" rel="noopener noreferrer">
+                        <div class="used-car-sales__thumb">
+                            <img src="<?php echo $json[$i]->thmbnail ?>" alt="<?php echo $json[$i]->title ?>">
                         </div>
-                        <div>
-                            <div>
-                                <div>
-                                    <p><?php echo $json[$i]->maker ?></p>
-                                    <p><?php echo $json[$i]->title ?></p>
+                        <div class="used-car-sales__card-body">
+                            <p class="used-car-sales__maker"><?php echo $json[$i]->maker ?></p>
+                            <p class="used-car-sales__name"><?php echo $json[$i]->title ?></p>
+                            <div class="used-car-sales__prices">
+                                <div class="used-car-sales__price-row">
+                                    <p class="used-car-sales__price-label">本体</p>
+                                    <p class="used-car-sales__price-value"><?php echo $json[$i]->basePrice ?></p>
                                 </div>
-                            </div>
-                            <div>
-                                <p>総額</p>
-                                <p><?php echo $json[$i]->totalPrice ?></p>
-                            </div>
-                            <div>
-                                <p>本体</p>
-                                <p><?php echo $json[$i]->basePrice ?></p>
+                                <div class="used-car-sales__price-row is-total">
+                                    <p class="used-car-sales__price-label">総額</p>
+                                    <p class="used-car-sales__price-value"><?php echo $json[$i]->totalPrice ?></p>
+                                </div>
                             </div>
                         </div>
                     </a>
