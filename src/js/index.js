@@ -12,6 +12,7 @@ class PanelTabs {
     this.buttonKey = options.buttonKey ?? "panelTab";
     this.panelKey = options.panelKey ?? "panelContent";
     this.stateKey = options.stateKey ?? null;
+    this.initialKey = options.initialKey ?? null;
     this.buttons = [];
     this.panels = [];
   }
@@ -27,6 +28,21 @@ class PanelTabs {
         this.open(button.dataset[this.buttonKey]);
       });
     });
+
+    const initialKey =
+      typeof this.initialKey === "function" ? this.initialKey() : this.initialKey;
+    const fallbackKey =
+      this.buttons.find((button) => button.classList.contains("is-active"))
+        ?.dataset[this.buttonKey] ?? this.buttons[0]?.dataset[this.buttonKey];
+
+    if (initialKey && this.buttons.some((button) => button.dataset[this.buttonKey] === initialKey)) {
+      this.open(initialKey);
+      return;
+    }
+
+    if (fallbackKey) {
+      this.open(fallbackKey);
+    }
   }
 
   open(key) {
@@ -311,9 +327,31 @@ const tirePriceTabs = new PanelTabs("[data-tire-price-tabs]", {
   buttonKey: "tireTab",
   panelKey: "tirePanel",
   stateKey: "activeTheme",
+  initialKey: () => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "summer" || hash === "winter") {
+      return hash;
+    }
+
+    const theme = new URLSearchParams(window.location.search).get("theme");
+    if (theme === "summer" || theme === "winter") {
+      return theme;
+    }
+
+    return null;
+  },
 });
 
-const priceGuideTabs = new PanelTabs("[data-panel-tabs]");
+const priceGuideTabs = new PanelTabs("[data-panel-tabs]", {
+  initialKey: () => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "engine" || hash === "brake" || hash === "tire" || hash === "other") {
+      return hash;
+    }
+
+    return null;
+  },
+});
 const headerMegaMenu = new HeaderMegaMenu("[data-header-mega]");
 const hamburgerChildMenu = new HamburgerChildMenu(".hamburger__menu");
 const rankingSlick = new RankingSlick(".slider-wrapper");

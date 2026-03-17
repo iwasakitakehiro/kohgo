@@ -5,6 +5,13 @@ require_once(dirname(__FILE__) . "/scrape.php");
 $get_contents =  new Scraping('blog.json', date("Y/m/d"));
 $contents = $get_contents->scraping();
 $json = json_decode($contents);
+$top_news_query = new WP_Query(array(
+    'post_status' => 'publish',
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'DESC',
+));
 
 ?>
 <main>
@@ -92,6 +99,10 @@ $json = json_decode($contents);
                     <div class="slider">
                         <div class="slider-wrapper">
                             <div id="ranking01" class="slider-slide">
+                                <svg width="105" height="70" viewBox="0 0 105 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M105 19.4223C105 15.006 101.427 11.4278 97.0212 11.4278C92.6184 11.4278 89.0455 15.0058 89.0455 19.4223C89.0455 21.5806 89.9011 23.5335 91.2887 24.9724C85.8637 36.2333 75.4944 40.1615 67.458 36.6027C60.2995 33.4325 57.6591 24.3621 56.765 17.3346C59.681 15.7929 61.6709 12.7288 61.6709 9.19558C61.6709 4.11431 57.566 0 52.5 0C47.4307 0 43.326 4.11451 43.326 9.19558C43.326 12.7288 45.3159 15.7929 48.2352 17.3346C47.3413 24.3623 44.6976 33.4327 37.5422 36.6027C29.5056 40.1613 19.1395 36.2333 13.7113 24.9724C15.0956 23.5335 15.9545 21.5806 15.9545 19.4223C15.9545 15.006 12.3816 11.4278 7.97569 11.4278C3.56979 11.4278 0 15.0058 0 19.4223C0 23.4854 3.02162 26.8288 6.93431 27.3427L18.3674 70H86.6328L98.0659 27.3427C101.975 26.8288 105 23.4852 105 19.4223Z" fill="#E3BD6B" />
+                                    <path d="M51.359 61.125V45.753L47.943 46.593L47.047 43.065L52.675 41.385H55.615V61.125H51.359Z" fill="white" />
+                                </svg>
                                 <div class="myCard no-first">
                                     <a href="https://futaba-car.jp/lineup/5681/" class="card">
                                         <div class="card-img">
@@ -113,6 +124,10 @@ $json = json_decode($contents);
                                 </div>
                             </div>
                             <div id="ranking02" class="slider-slide">
+                                <svg width="105" height="70" viewBox="0 0 105 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M105 19.4223C105 15.006 101.427 11.4278 97.0212 11.4278C92.6184 11.4278 89.0455 15.0058 89.0455 19.4223C89.0455 21.5806 89.9011 23.5335 91.2887 24.9724C85.8637 36.2333 75.4944 40.1615 67.458 36.6027C60.2995 33.4325 57.6592 24.3621 56.765 17.3346C59.681 15.7929 61.6709 12.7288 61.6709 9.19558C61.6709 4.11431 57.566 0 52.5 0C47.4307 0 43.326 4.11451 43.326 9.19558C43.326 12.7288 45.3159 15.7929 48.2352 17.3346C47.3413 24.3623 44.6976 33.4327 37.5422 36.6027C29.5056 40.1613 19.1395 36.2333 13.7113 24.9724C15.0956 23.5335 15.9545 21.5806 15.9545 19.4223C15.9545 15.006 12.3816 11.4278 7.97569 11.4278C3.5698 11.4278 0 15.0058 0 19.4223C0 23.4854 3.02162 26.8288 6.93431 27.3427L18.3674 70H86.6328L98.0659 27.3427C101.975 26.8288 105 23.4852 105 19.4223Z" fill="#B7BDC4" />
+                                    <path d="M45.122 61.125V57.709L51.646 52.361C54.11 50.345 55.034 49.281 55.034 47.657C55.034 45.977 53.97 45.109 52.402 45.109C50.862 45.109 49.854 45.949 48.398 47.741L45.374 45.305C47.306 42.701 49.182 41.245 52.682 41.245C56.714 41.245 59.43 43.625 59.43 47.293V47.349C59.43 50.653 57.75 52.221 54.278 54.937L51.086 57.401H59.626V61.125H45.122Z" fill="white" />
+                                </svg>
                                 <div class="myCard no-second">
                                     <a href="https://futaba-car.jp/lineup/5629/" class="card">
                                         <div class="card-img">
@@ -134,6 +149,10 @@ $json = json_decode($contents);
                                 </div>
                             </div>
                             <div id="ranking03" class="slider-slide">
+                                <svg width="105" height="70" viewBox="0 0 105 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M105 19.4223C105 15.006 101.427 11.4278 97.0212 11.4278C92.6184 11.4278 89.0455 15.0058 89.0455 19.4223C89.0455 21.5806 89.9011 23.5335 91.2887 24.9724C85.8637 36.2333 75.4944 40.1615 67.458 36.6027C60.2995 33.4325 57.6592 24.3621 56.765 17.3346C59.681 15.7929 61.6709 12.7288 61.6709 9.19558C61.6709 4.11431 57.566 0 52.5 0C47.4307 0 43.326 4.11451 43.326 9.19558C43.326 12.7288 45.3159 15.7929 48.2352 17.3346C47.3413 24.3623 44.6976 33.4327 37.5422 36.6027C29.5056 40.1613 19.1395 36.2333 13.7113 24.9724C15.0956 23.5335 15.9545 21.5806 15.9545 19.4223C15.9545 15.006 12.3816 11.4278 7.97569 11.4278C3.5698 11.4278 0 15.0058 0 19.4223C0 23.4854 3.02162 26.8288 6.93431 27.3427L18.3674 70H86.6328L98.0659 27.3427C101.975 26.8288 105 23.4852 105 19.4223Z" fill="#B76800" />
+                                    <path d="M52.458 61.461C48.902 61.461 46.494 60.089 44.814 58.073L47.782 55.245C49.126 56.785 50.498 57.597 52.514 57.597C54.166 57.597 55.286 56.673 55.286 55.217V55.161C55.286 53.565 53.886 52.669 51.45 52.669H49.658L48.986 49.925L53.662 45.221H45.962V41.525H59.206V44.773L54.25 49.505C56.91 49.953 59.514 51.325 59.514 54.993V55.049C59.514 58.745 56.826 61.461 52.458 61.461Z" fill="white" />
+                                </svg>
                                 <div class="myCard no-third">
                                     <a href="https://futaba-car.jp/lineup/13453/" class="card">
                                         <div class="card-img">
@@ -259,7 +278,7 @@ $json = json_decode($contents);
                         <h2>タイヤ交換</h2>
 
                         <div class="section__link-wrap pc-show">
-                            <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
+                            <a class="section__link" href="<?= get_home_url(); ?>/service06">
                                 <span>詳細はこちら</span>
                                 <span class="link-icon" aria-hidden="true">
                                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +296,7 @@ $json = json_decode($contents);
                 </div>
             </div>
             <div class="section__link-wrap sp-show">
-                <a class="section__link" href="<?= get_home_url(); ?>/tire-change">
+                <a class="section__link" href="<?= get_home_url(); ?>/service06">
                     <span>詳細はこちら</span>
                     <span class="link-icon" aria-hidden="true">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -290,13 +309,13 @@ $json = json_decode($contents);
             </div>
             <div class="tire-change__cards" aria-hidden="true">
                 <article class="tire-change__card tire-change__card--summer">
-                    <a href="#">
+                    <a href="<?= get_home_url() ?>/service06/#summer">
                         <img src="<?= get_template_directory_uri(); ?>/img/global/summer-tire.png" alt="">
                     </a>
                 </article>
 
                 <article class="tire-change__card tire-change__card--winter">
-                    <a href="#">
+                    <a href="<?= get_home_url() ?>/service06/#winter">
                         <img src="<?= get_template_directory_uri(); ?>/img/global/winter-tire.png" alt="">
                     </a>
                 </article>
@@ -503,7 +522,7 @@ $json = json_decode($contents);
                         <p>お客様のライフスタイルに合った1台を、一緒にお探しします。仕入れから点検・納車まで自社でしっかり対応。<br>ご購入後も車検や整備で長く安心して乗っていただけます。</p>
                     </div>
                     <div class="section__link-wrap sp-show">
-                        <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">
+                        <a class="section__link" href="https://www.carsensor.net/shop/chiba/329885002/stocklist/">
                             <span>詳細はこちら</span>
                             <span class="link-icon" aria-hidden="true">
                                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -526,15 +545,15 @@ $json = json_decode($contents);
                         </div>
                         <div class="used-car-sales__card-body">
                             <p class="used-car-sales__maker"><?php echo $json[$i]->maker ?></p>
-                            <p class="used-car-sales__name"><?php echo $json[$i]->title ?></p>
+                            <p class="used-car-sales__name"><?php echo mb_strlen($json[$i]->title) > 15 ? mb_substr($json[$i]->title, 0, 15) . '…' : $json[$i]->title ?></p>
                             <div class="used-car-sales__prices">
                                 <div class="used-car-sales__price-row">
                                     <p class="used-car-sales__price-label">本体</p>
-                                    <p class="used-car-sales__price-value"><?php echo $json[$i]->basePrice ?></p>
+                                    <p class="used-car-sales__price-value"><span><?php echo $json[$i]->basePrice ?></span><span class="unit">万円</span></p>
                                 </div>
                                 <div class="used-car-sales__price-row is-total">
                                     <p class="used-car-sales__price-label">総額</p>
-                                    <p class="used-car-sales__price-value"><?php echo $json[$i]->totalPrice ?></p>
+                                    <p class="used-car-sales__price-value"><span><?php echo $json[$i]->totalPrice ?></span><span class="unit">万円</span></p>
                                 </div>
                             </div>
                         </div>
@@ -609,36 +628,39 @@ $json = json_decode($contents);
                 </div>
             </div>
             <div class="top-news__list">
-                <article class="top-news__item">
-                    <div class="top-news__thumb">
-                        <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
-                    </div>
-                    <div class="top-news__content">
-                        <span class="top-news__category top-news__category--used">中古車情報</span>
-                        <h3 class="top-news__title">【入荷】ワゴンR：袖ヶ浦000 あ0000　白</h3>
-                        <p class="top-news__date">2026.01.01</p>
-                    </div>
-                </article>
-                <article class="top-news__item">
-                    <div class="top-news__thumb">
-                        <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
-                    </div>
-                    <div class="top-news__content">
-                        <span class="top-news__category top-news__category--info">お知らせ</span>
-                        <h3 class="top-news__title">年末年始休業のお知らせ</h3>
-                        <p class="top-news__date">2026.01.01</p>
-                    </div>
-                </article>
-                <article class="top-news__item">
-                    <div class="top-news__thumb">
-                        <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
-                    </div>
-                    <div class="top-news__content">
-                        <span class="top-news__category top-news__category--campaign">キャンペーン</span>
-                        <h3 class="top-news__title">車検の「早割サービス」実施中！</h3>
-                        <p class="top-news__date">2026.01.01</p>
-                    </div>
-                </article>
+                <?php while ($top_news_query->have_posts()) : $top_news_query->the_post(); ?>
+                    <?php
+                    $terms = get_the_category(get_the_ID());
+                    $category_name = '';
+                    $category_slug = '';
+
+                    if ($terms && !is_wp_error($terms)) {
+                        $category_name = $terms[0]->name;
+                        $category_slug = $terms[0]->slug;
+                    }
+                    ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <article class="top-news__item">
+                            <div class="top-news__thumb">
+                                <?php if (get_the_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail(); ?>
+                                <?php else : ?>
+                                    <img src="<?= get_template_directory_uri(); ?>/img/global/logo.png" alt="オートサービス向後">
+                                <?php endif; ?>
+                            </div>
+                            <div class="top-news__content" <?= $category_name !== '' ? ' data-category="' . esc_attr($category_name) . '"' : ''; ?>>
+                                <?php if ($category_name !== '') : ?>
+                                    <span class="top-news__category top-news__category--<?= esc_attr($category_slug); ?>">
+                                        <?= esc_html($category_name); ?>
+                                    </span>
+                                <?php endif; ?>
+                                <h3 class="top-news__title"><?php the_title(); ?></h3>
+                                <p class="top-news__date"><?php the_time('Y.m.d'); ?></p>
+                            </div>
+                        </article>
+                    </a>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
             </div>
             <div class="section__link-wrap sp-show">
                 <a class="section__link" href="<?= get_home_url(); ?>/used-car-sales">

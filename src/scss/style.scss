@@ -346,9 +346,16 @@ header {
 }
 aside {
   position: fixed;
-  left: 0;
-  bottom: 0;
+  left: 32px;
+  bottom: 32px;
   z-index: 10;
+  display: grid;
+  gap: 50px;
+  @include sp() {
+    left: auto;
+    right: 10px;
+    bottom: 20px;
+  }
   .side {
     align-items: center;
     background: #ffffff;
@@ -1082,7 +1089,7 @@ img {
     padding: 100px 0 120px;
     position: relative;
     @include sp() {
-      padding: 80px 0 200px;
+      padding: 80px 0 100px;
     }
   }
   &__inner {
@@ -1160,7 +1167,8 @@ img {
     }
 
     &__content {
-      padding: 140px 0 80px;
+      margin-top: -50px !important;
+      padding: 0 0 80px;
     }
 
     &__lead {
@@ -1214,7 +1222,18 @@ img {
       .slider-slide {
         width: max(16.25em, 240px);
         height: 360px;
-
+        position: relative;
+        > svg {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -70px;
+          margin: auto;
+          display: block;
+          @include tb() {
+            top: -60px;
+          }
+        }
         &:nth-child(1) {
           order: 3;
           position: relative;
@@ -1331,7 +1350,8 @@ img {
       justify-content: flex-start;
       margin-top: 72px;
       padding-left: 20px;
-      overflow: hidden;
+      overflow: visible;
+      padding-top: 70px;
 
       .slider {
         max-width: min(344px, calc(100vw - 20px));
@@ -1487,7 +1507,11 @@ img {
     right: 0;
     top: -150px;
     width: 56.875em;
-
+    @include tb() {
+      position: relative;
+      top: -60px;
+      margin-left: 20pxa;
+    }
     img {
       inset: 0;
       height: 100%;
@@ -1507,8 +1531,10 @@ img {
       padding-left: 20px;
     }
     @include sp() {
-      top: -200px;
+      top: 0;
       max-width: 500px;
+      height: 237px;
+      min-height: 237px !important;
     }
   }
 
@@ -5898,17 +5924,23 @@ img {
 }
 .used-car-sales {
   padding: 100px 0 80px;
-
   &__lists {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 320px));
     gap: 32px;
+    justify-content: center;
     margin-top: 54px;
+    max-width: 1728px;
+    margin-inline: auto;
     padding: 0;
+    width: 100%;
   }
 
   &__item {
     list-style: none;
+    margin-inline: auto;
+    max-width: 320px;
+    width: 100%;
   }
 
   &__card {
@@ -5919,7 +5951,9 @@ img {
     background: #ffffff;
     box-shadow: 0 18px 40px rgba(34, 34, 34, 0.12);
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:hover {
       transform: translateY(-6px);
@@ -5952,11 +5986,12 @@ img {
   }
 
   &__name {
-    margin-top: 8px;
     color: #e26d46;
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.7;
+    line-height: 1;
+    border-bottom: 1px solid;
+    display: inline-block;
   }
 
   &__prices {
@@ -5984,19 +6019,25 @@ img {
     font-weight: 500;
     line-height: 1.5;
     flex-shrink: 0;
+    color: #6c5e4f;
   }
 
   &__price-value {
     text-align: right;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
-    font-feature-settings: "pnum" on, "lnum" on;
+    color: #6c5e4f;
+    font-feature-settings:
+      "pnum" on,
+      "lnum" on;
+    .unit {
+      font-size: 14px;
+    }
   }
 
   @media screen and (max-width: 1024px) {
     &__lists {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
     }
 
@@ -6009,7 +6050,6 @@ img {
     padding: 80px 0 64px;
 
     &__lists {
-      grid-template-columns: 1fr;
       gap: 20px;
       margin-top: 40px;
     }
@@ -7684,4 +7724,3 @@ img {
     }
   }
 }
-

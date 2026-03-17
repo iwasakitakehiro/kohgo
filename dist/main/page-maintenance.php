@@ -215,7 +215,7 @@ $price_guide_panels = [
               type="button"
               role="tab"
               aria-selected="<?php echo $index === 0 ? 'true' : 'false'; ?>"
-              aria-controls="price-guide-<?php echo esc_attr($tab['key']); ?>"
+              aria-controls="<?php echo esc_attr($tab['key']); ?>"
               id="price-tab-<?php echo esc_attr($tab['key']); ?>"
               data-panel-tab="<?php echo esc_attr($tab['key']); ?>">
               <span><?php echo esc_html($tab['label']); ?></span>
@@ -226,7 +226,7 @@ $price_guide_panels = [
         <?php foreach ($price_guide_tabs as $index => $tab) : ?>
           <div
             class="price-guide-tabs__panel<?php echo $index === 0 ? ' is-active' : ''; ?>"
-            id="price-guide-<?php echo esc_attr($tab['key']); ?>"
+            id="<?php echo esc_attr($tab['key']); ?>"
             role="tabpanel"
             aria-labelledby="price-tab-<?php echo esc_attr($tab['key']); ?>"
             data-panel-content="<?php echo esc_attr($tab['key']); ?>"

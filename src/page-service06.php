@@ -27,13 +27,13 @@
     <div class="inner">
       <div class="feature-checklist__tire-change" aria-hidden="true">
         <article class="tire-change__card tire-change__card--summer">
-          <a href="#">
+          <a href="#summer">
             <img src="<?= get_template_directory_uri(); ?>/img/global/summer-tire.png" alt="">
           </a>
         </article>
 
         <article class="tire-change__card tire-change__card--winter">
-          <a href="#">
+          <a href="#winter">
             <img src="<?= get_template_directory_uri(); ?>/img/global/winter-tire.png" alt="">
           </a>
         </article>
@@ -515,7 +515,7 @@
     <div class="inner">
       <div class="tire-price-tabs" data-tire-price-tabs>
         <div class="tire-price-tabs__tablist" role="tablist" aria-label="タイヤ種別">
-          <button class="tire-price-tabs__tab is-active" type="button" role="tab" aria-selected="true" aria-controls="tire-price-summer" id="tire-tab-summer" data-tire-tab="summer">
+          <button class="tire-price-tabs__tab is-active" type="button" role="tab" aria-selected="true" aria-controls="summer" id="tire-tab-summer" data-tire-tab="summer">
             <span class="tire-price-tabs__tab-icon tire-price-tabs__tab-icon--summer" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1264_4155)">
@@ -537,7 +537,7 @@
             </span>
             <span>サマータイヤ</span>
           </button>
-          <button class="tire-price-tabs__tab" type="button" role="tab" aria-selected="false" aria-controls="tire-price-winter" id="tire-tab-winter" data-tire-tab="winter">
+          <button class="tire-price-tabs__tab" type="button" role="tab" aria-selected="false" aria-controls="winter" id="tire-tab-winter" data-tire-tab="winter">
             <span class="tire-price-tabs__tab-icon tire-price-tabs__tab-icon--winter" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_637_6110)">
@@ -555,7 +555,7 @@
           </button>
         </div>
 
-        <div class="tire-price-tabs__panel is-active" id="tire-price-summer" role="tabpanel" aria-labelledby="tire-tab-summer" data-tire-panel="summer">
+        <div class="tire-price-tabs__panel is-active" id="summer" role="tabpanel" aria-labelledby="tire-tab-summer" data-tire-panel="summer">
           <div class="tire-price-table-wrap">
             <table class="tire-price-table tire-price-table--summer">
               <thead>
@@ -625,7 +625,7 @@
           </div>
         </div>
 
-        <div class="tire-price-tabs__panel" id="tire-price-winter" role="tabpanel" aria-labelledby="tire-tab-winter" data-tire-panel="winter" hidden>
+        <div class="tire-price-tabs__panel" id="winter" role="tabpanel" aria-labelledby="tire-tab-winter" data-tire-panel="winter" hidden>
           <div class="tire-price-table-wrap">
             <table class="tire-price-table tire-price-table--winter">
               <thead>

@@ -53,7 +53,7 @@ class DOMDocumentWrapper {
 	}
 	public function load($markup, $contentType = null, $newDocumentID = null) {
 //		phpQuery::$documents[$id] = $this;
-		$this->contentType = strtolower($contentType);
+		$this->contentType = strtolower((string) $contentType);
 		if ($markup instanceof DOMDOCUMENT) {
 			$this->document = $markup;
 			$this->root = $this->document;
@@ -156,8 +156,8 @@ class DOMDocumentWrapper {
 		}
 		// Should be careful here, still need 'magic encoding detection' since lots of pages have other 'default encoding'
 		// Worse, some pages can have mixed encodings... we'll try not to worry about that
-		$requestedCharset = strtoupper($requestedCharset);
-		$documentCharset = strtoupper($documentCharset);
+		$requestedCharset = strtoupper((string) $requestedCharset);
+		$documentCharset = strtoupper((string) $documentCharset);
 		phpQuery::debug("DOC: $documentCharset REQ: $requestedCharset");
 		if ($requestedCharset && $documentCharset && $requestedCharset !== $documentCharset) {
 			phpQuery::debug("CHARSET CONVERT");

@@ -1757,6 +1757,7 @@ implements Iterator, Countable, ArrayAccess
 	{
 		return $this->size();
 	}
+	#[\ReturnTypeWillChange]
 	public function count()
 	{
 		return $this->size();
@@ -3128,6 +3129,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function rewind()
 	{
 		$this->debug('iterating foreach');
@@ -3144,6 +3146,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function current()
 	{
 		return $this->elementsInterator[$this->current];
@@ -3151,6 +3154,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function key()
 	{
 		return $this->current;
@@ -3166,6 +3170,7 @@ implements Iterator, Countable, ArrayAccess
 	 * @see phpQueryObject::_next()
 	 * @return phpQueryObject|QueryTemplatesSource|QueryTemplatesParse|QueryTemplatesSourceQuery
 	 */
+	#[\ReturnTypeWillChange]
 	public function next($cssSelector = null)
 	{
 		//		if ($cssSelector || $this->valid)
@@ -3184,6 +3189,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function valid()
 	{
 		return $this->valid;
@@ -3193,6 +3199,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetExists($offset)
 	{
 		return $this->find($offset)->size() > 0;
@@ -3200,6 +3207,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetGet($offset)
 	{
 		return $this->find($offset);
@@ -3207,6 +3215,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetSet($offset, $value)
 	{
 		//		$this->find($offset)->replaceWith($value);
@@ -3215,6 +3224,7 @@ implements Iterator, Countable, ArrayAccess
 	/**
 	 * @access private
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetUnset($offset)
 	{
 		// empty
