@@ -106,7 +106,10 @@ header {
     visibility: hidden;
     opacity: 0;
     transform: scale(0.98);
-    transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+    transition:
+      transform 0.5s,
+      opacity 0.5s,
+      visibility 0.5s;
     &.active {
       visibility: visible;
       transform: scale(1);
@@ -429,7 +432,8 @@ aside {
     overflow: hidden;
     position: relative;
     @include sp() {
-      height: 600px;
+      height: 560px;
+      min-height: 560px;
     }
   }
   &__image {
@@ -437,12 +441,47 @@ aside {
     position: absolute;
     border-bottom-left-radius: 50px;
     overflow: hidden;
+    background-color: #000;
     @include sp() {
       border-bottom-left-radius: 30px;
+      height: 560px;
+      min-height: 560px;
     }
+
+    > div,
+    .slick-list,
+    .slick-track,
+    .slick-slide,
+    .slick-slide > div {
+      height: 100%;
+    }
+
+    .slick-track {
+      display: block;
+    }
+
     img {
+      display: block;
       height: 100%;
       max-width: inherit;
+      object-fit: cover;
+      width: 100%;
+
+      @include sp() {
+        height: 560px;
+        min-height: 560px;
+      }
+    }
+
+    @include sp() {
+      > div,
+      .slick-list,
+      .slick-track,
+      .slick-slide,
+      .slick-slide > div {
+        height: 560px;
+        min-height: 560px;
+      }
     }
   }
 
@@ -686,6 +725,8 @@ aside {
     grid-template-columns: repeat(4, 1fr);
     margin: 80px 0 0;
     max-width: 1200px;
+    position: relative;
+    z-index: 1;
   }
 
   &__gallery-item {
@@ -1440,11 +1481,29 @@ img {
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     flex: 1;
-    width: 56.875em;
-    top: -150px;
-    right: 0;
+    height: 620px;
+    overflow: hidden;
     position: absolute;
+    right: 0;
+    top: -150px;
+    width: 56.875em;
+
+    img {
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.35s ease;
+      width: 100%;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+
     @include tb() {
+      height: 360px;
       padding-left: 20px;
     }
     @include sp() {
@@ -1472,12 +1531,19 @@ img {
 
   &__item {
     align-items: center;
-
     color: #6c5e4f;
     display: flex;
     justify-content: space-between;
+    opacity: 0.2;
     padding: 18px 0;
     text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover,
+    &:focus-visible,
+    &.is-active {
+      opacity: 1;
+    }
   }
 
   &__num {
@@ -2085,11 +2151,8 @@ img {
 
   &__panel {
     background-color: #ffffff;
-    background-image: linear-gradient(
-        to right,
-        rgba(108, 94, 79, 0.04) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(to right, rgba(108, 94, 79, 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(108, 94, 79, 0.04) 1px, transparent 1px);
     background-size: 18px 18px;
     margin-top: 80px;
@@ -3606,7 +3669,9 @@ img {
     justify-content: center;
     min-height: 64px;
     padding: 20px;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
     border-radius: 20px 20px 0 0;
 
     &.is-active {
@@ -4039,7 +4104,9 @@ img {
     font-weight: 700;
     min-height: 52px;
     padding: 16px 20px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 
     &.is-active {
       background: #de7e4d;
@@ -5263,10 +5330,8 @@ img {
 }
 
 .footer-cta {
-  background: linear-gradient(
-      rgba(188, 171, 150, 0.88),
-      rgba(188, 171, 150, 0.88)
-    ),
+  background:
+    linear-gradient(rgba(188, 171, 150, 0.88), rgba(188, 171, 150, 0.88)),
     radial-gradient(
       circle at 20% 40%,
       rgba(255, 255, 255, 0.16) 0%,
@@ -7428,5 +7493,53 @@ img {
     font-size: 16px;
     line-height: 1;
     margin-top: 20px;
+  }
+}
+
+@keyframes round-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about {
+  position: relative;
+  .round {
+    animation: round-rotate 12s linear infinite;
+    position: absolute;
+    bottom: 80px;
+    right: 90px;
+    z-index: 0;
+    @include tb() {
+      right: auto;
+      left: 20px;
+    }
+    img {
+      @include tb() {
+        width: 130px;
+      }
+    }
+  }
+}
+.top-news {
+  .round {
+    animation: round-rotate 12s linear infinite;
+    position: absolute;
+    bottom: 80px;
+    left: 90px;
+    z-index: 0;
+    @include tb() {
+      right: auto;
+      left: 20px;
+    }
+    img {
+      @include tb() {
+        width: 130px;
+      }
+    }
   }
 }

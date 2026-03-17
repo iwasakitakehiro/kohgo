@@ -1,10 +1,26 @@
 ﻿<?php get_header(); ?>
+<?php
+
+require_once(dirname(__FILE__) . "/scrape.php");
+$get_contents =  new Scraping('blog.json', date("Y/m/d"));
+$contents = $get_contents->scraping();
+$json = json_decode($contents);
+
+?>
 <main>
     <section class="mv">
         <div class="mv__inner">
             <div class="mv__visual">
                 <div class="mv__image" aria-hidden="true">
-                    <img src="<?= get_template_directory_uri(); ?>/img/top/mv01.png" alt="">
+                    <div>
+                        <img src="<?= get_template_directory_uri(); ?>/img/top/mv01.png" alt="">
+                    </div>
+                    <div>
+                        <img src="<?= get_template_directory_uri(); ?>/img/top/mv01.png" alt="">
+                    </div>
+                    <div>
+                        <img src="<?= get_template_directory_uri(); ?>/img/top/mv01.png" alt="">
+                    </div>
                 </div>
                 <div class="mv__copy-main">
                     <h1>守り、支える。<br>愛車と、あなたを。</h1>
@@ -60,6 +76,9 @@
             <div class="about__gallery-item about__gallery-item--last">
                 <img src="<?= get_template_directory_uri(); ?>/img/top/about04.png" alt="">
             </div>
+        </div>
+        <div class="round">
+            <img src="<?= get_template_directory_uri(); ?>/img/top/round.svg" alt="">
         </div>
     </section>
 
@@ -302,11 +321,17 @@
         <div>
             <div class="service__content">
                 <div class="service__image" aria-hidden="true">
-                    <img src="<?= get_template_directory_uri(); ?>/img/top/service-img.png" alt="">
+                    <img class="is-active" data-service-image="01" src="<?= get_template_directory_uri(); ?>/img/top/service01.png" alt="">
+                    <img data-service-image="02" src="<?= get_template_directory_uri(); ?>/img/top/service02.png" alt="">
+                    <img data-service-image="03" src="<?= get_template_directory_uri(); ?>/img/top/service03.png" alt="">
+                    <img data-service-image="04" src="<?= get_template_directory_uri(); ?>/img/top/service04.png" alt="">
+                    <img data-service-image="05" src="<?= get_template_directory_uri(); ?>/img/top/service05.png" alt="">
+                    <img data-service-image="06" src="<?= get_template_directory_uri(); ?>/img/top/service06.png" alt="">
+                    <img data-service-image="07" src="<?= get_template_directory_uri(); ?>/img/top/service07.png" alt="">
                 </div>
                 <div class="inner">
                     <div class="service__list" aria-label="サービス一覧">
-                        <a class="service__item" href="#">
+                        <a class="service__item is-active" data-service-key="01" href="#">
                             <div>
                                 <p class="service__num">SERVICE 01</p>
                                 <p class="service__name">カーラッピング</p>
@@ -318,7 +343,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="service__item" href="#">
+                        <a class="service__item" data-service-key="02" href="#">
                             <div>
                                 <p class="service__num">SERVICE 02</p>
                                 <p class="service__name">車検</p>
@@ -330,7 +355,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="service__item" href="#">
+                        <a class="service__item" data-service-key="03" href="#">
                             <div>
                                 <p class="service__num">SERVICE 03</p>
                                 <p class="service__name">鈑金</p>
@@ -342,7 +367,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="service__item" href="#">
+                        <a class="service__item" data-service-key="04" href="#">
                             <div>
                                 <p class="service__num">SERVICE 04</p>
                                 <p class="service__name">リモートサービス</p>
@@ -354,7 +379,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="service__item" href="#">
+                        <a class="service__item" data-service-key="05" href="#">
                             <div>
                                 <p class="service__num">SERVICE 05</p>
                                 <p class="service__name">自動車保険</p>
@@ -366,7 +391,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="service__item" href="#">
+                        <a class="service__item" data-service-key="06" href="#">
                             <div>
                                 <p class="service__num">SERVICE 06</p>
                                 <p class="service__name">タイヤ交換</p>
@@ -378,7 +403,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="service__item" href="#">
+                        <a class="service__item" data-service-key="07" href="#">
                             <div>
                                 <p class="service__num">SERVICE 07</p>
                                 <p class="service__name">ニコニコレンタカー</p>
@@ -492,6 +517,33 @@
                 </div>
             </div>
         </div>
+        <div class="used-car-sales__lists">
+            <?php for ($i = 0; $i < count($json); $i++) : ?>
+                <li>
+                    <a href="https://www.carsensor.net<?php echo $json[$i]->url ?>" target="_blank">
+                        <div>
+                            <img src="<?php echo $json[$i]->thmbnail ?>">
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <p><?php echo $json[$i]->maker ?></p>
+                                    <p><?php echo $json[$i]->title ?></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p>総額</p>
+                                <p><?php echo $json[$i]->totalPrice ?></p>
+                            </div>
+                            <div>
+                                <p>本体</p>
+                                <p><?php echo $json[$i]->basePrice ?></p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <?php endfor; ?>
+        </div>
     </section>
     <section class="top-recruit-teaser">
         <div class="inner">
@@ -604,6 +656,9 @@
             </div>
         </div>
         <p class="top-news__bg-text" aria-hidden="true">NEW CAR LIFE</p>
+        <div class="round">
+            <img src="<?= get_template_directory_uri(); ?>/img/top/round-info.svg" alt="">
+        </div>
     </section>
     <section class="top-social-showcase">
         <div class="inner">

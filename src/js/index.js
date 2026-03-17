@@ -62,7 +62,7 @@ class HeaderMegaMenu {
     if (!this.root) return;
 
     this.triggers = Array.from(
-      this.root.querySelectorAll("[data-mega-trigger]")
+      this.root.querySelectorAll("[data-mega-trigger]"),
     );
     this.panels = Array.from(this.root.querySelectorAll("[data-mega-panel]"));
 
@@ -137,10 +137,10 @@ class HamburgerChildMenu {
     if (!this.root) return;
 
     this.triggers = Array.from(
-      this.root.querySelectorAll("[data-hamburger-child]")
+      this.root.querySelectorAll("[data-hamburger-child]"),
     );
     this.panels = Array.from(
-      this.root.querySelectorAll("[data-hamburger-panel]")
+      this.root.querySelectorAll("[data-hamburger-panel]"),
     );
 
     this.triggers.forEach((trigger) => {
@@ -233,6 +233,73 @@ class RankingSlick {
   }
 }
 
+class MvFadeSlick {
+  constructor(selector) {
+    this.root = document.querySelector(selector);
+    this.$slider = null;
+  }
+
+  init() {
+    if (!this.root) return;
+
+    this.$slider = $(this.root);
+
+    if (this.$slider.hasClass("slick-initialized")) return;
+
+    this.$slider.slick({
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      dots: false,
+      fade: true,
+      infinite: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      speed: 1200,
+      swipe: false,
+    });
+  }
+}
+
+class ServiceImageHover {
+  constructor(selector) {
+    this.root = document.querySelector(selector);
+    this.items = [];
+    this.images = [];
+  }
+
+  init() {
+    if (!this.root) return;
+
+    this.items = Array.from(this.root.querySelectorAll("[data-service-key]"));
+    this.images = Array.from(
+      this.root.querySelectorAll("[data-service-image]"),
+    );
+
+    if (!this.items.length || !this.images.length) return;
+
+    this.items.forEach((item) => {
+      const key = item.dataset.serviceKey;
+      item.addEventListener("mouseenter", () => {
+        this.open(key);
+      });
+      item.addEventListener("focus", () => {
+        this.open(key);
+      });
+    });
+  }
+
+  open(key) {
+    this.items.forEach((item) => {
+      item.classList.toggle("is-active", item.dataset.serviceKey === key);
+    });
+
+    this.images.forEach((image) => {
+      image.classList.toggle("is-active", image.dataset.serviceImage === key);
+    });
+  }
+}
+
 const hamburger = new Hamburger({
   target: "#hamburger",
   navigation: ".hamburger__menu",
@@ -250,6 +317,8 @@ const priceGuideTabs = new PanelTabs("[data-panel-tabs]");
 const headerMegaMenu = new HeaderMegaMenu("[data-header-mega]");
 const hamburgerChildMenu = new HamburgerChildMenu(".hamburger__menu");
 const rankingSlick = new RankingSlick(".slider-wrapper");
+const mvFadeSlick = new MvFadeSlick(".mv__image");
+const serviceImageHover = new ServiceImageHover(".service");
 
 hamburger.init();
 tirePriceTabs.init();
@@ -257,4 +326,5 @@ priceGuideTabs.init();
 headerMegaMenu.init();
 hamburgerChildMenu.init();
 rankingSlick.init();
-
+mvFadeSlick.init();
+serviceImageHover.init();
